@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor App</title>
+    <link rel="stylesheet" href="../assests/styles/editor.css">
+    <link rel="stylesheet" href="../assests/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            list-style-type: none;
+            text-decoration: none;
+            user-select: none;
+        }
+
+        a:visited {
+            color: unset;
+        }
+
+        .templateContainer {
+            background-color: #f8f8f8;
+            width: inherit;
+            height: inherit;
+            padding: 2rem 1.5rem;
+        }
+
+        .templateContainer header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0 4rem;
+            padding-block: inherit;
+        }
+
+        .templateContainer header .names h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+
+        .templateContainer header .names span {
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #9f9f9f;
+            text-transform: uppercase;
+        }
+
+        .templateContainer header .socials {
+            margin-top: 0.4rem;
+        }
+
+        .templateContainer header .socials ul li {
+            margin: 0.2rem 0;
+            font-size: 0.99rem;
+        }
+
+        .templateContainer header .socials ul li i {
+            display: inline-block;
+            background-color: #eee305;
+            padding: 4px;
+            border-radius: 6px;
+            margin-right: 0.4rem;
+        }
+
+        .templateContainer .sides {
+            width: inherit;
+            height: inherit;
+            display: flex;
+        }
+
+        .templateContainer .sides .column {
+            height: inherit;
+        }
+
+        .templateContainer .sides .colthin {
+            width: 40%;
+            border-right: 2px solid #d6d8d6;
+        }
+
+        .templateContainer .sides .colthin .image {
+            width: 100%;
+            text-align: center;
+        }
+
+        .templateContainer .sides .colthin .image img {
+            width: 50%;
+            height: 50%;
+            border-radius: 6px;
+        }
+
+        .templateContainer .sides .colthin .profile-information ul {
+            margin: 1.2rem 0;
+        }
+
+        .templateContainer .sides .colthin .language ul,
+        .templateContainer .sides .colthin .skills ul {
+            list-style-type: disc;
+        }
+
+        .templateContainer .sides .colthin .language ul li,
+        .templateContainer .sides .colthin .skills ul li {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .templateContainer .sides .colbold .experience-user h2,
+        .templateContainer .sides .colbold .about-user h2,
+        .templateContainer .sides .colthin .profile-information h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        .templateContainer .sides .colthin .profile-information h3 {
+            font-size: 1.1rem;
+            text-transform: capitalize;
+            color: #3b3a3a;
+        }
+
+        .templateContainer .sides .colthin .profile-information h5 {
+            text-transform: capitalize;
+            font-size: 0.9rem;
+        }
+
+        .templateContainer .sides .colthin .profile-information p {
+            text-transform: capitalize;
+            font-size: 0.9rem;
+        }
+
+        .templateContainer .sides .colbold {
+            width: 60%;
+            padding: 0 2rem;
+        }
+
+        .templateContainer .sides .colbold .about-user {
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 2rem;
+        }
+
+        .templateContainer .sides .colbold .experience-user p,
+        .templateContainer .sides .colbold .about-user p {
+            font-size: 1.01rem;
+            font-weight: 400;
+            color: #8d8d8d;
+            margin: 0.3rem 0;
+        }
+
+        .templateContainer .sides .colbold .experience-user div {
+            margin: 1.5rem 0;
+        }
+
+        .templateContainer .sides .colbold .experience-user h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .templateContainer .sides .colbold .experience-user span {
+            color: #3b3a3a;
+            text-transform: capitalize;
+            margin: 0.3rem 0;
+            display: inline-block;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="fill_container">
+            <div class="fill-col left">
+                <main>
+                    <div class="templateContainer">
+                        <header>
+                            <div class="names">
+                                <h1><strong id="first-name-cv"></strong></h1>
+                                <h1 id="last-name-cv"></h1>
+                                <span id="headline-cv" class="headline"></span>
+                            </div>
+                            <div class="socials">
+                                <ul>
+                                    <li><i class="ri-map-pin-2-line"></i><span id="address-location-cv"></span></li>
+                                    <li><i class="ri-smartphone-line"></i><span id="phone-cv"></span></li>
+                                    <li><i class="ri-mail-line"></i><span id="email-cv"></span></li>
+                                    <li><i class="ri-calendar-line"></i><span id="date-birth-cv"></span></li>
+                                </ul>
+                            </div>
+                        </header>
+                        <div class="sides">
+                            <div class="column colthin">
+                                <div class="image">
+                                    <img src="../assests/image/profile-user.jpg" alt="profile user">
+                                </div>
+                                <div class="profile-information educationCV">
+                                    <h2>education</h2>
+                                    <div id="col_education">
+                                    </div>
+                                    <!-- <ul>
+                                        <li>
+                                            <h3>ENTER YOUR DEGREE</h3>
+                                            <h5>your university name</h5>
+                                            <p>2020 2022 - tanger</p>
+                                        </li>
+                                    </ul> -->
+                                </div>
+                                <div class="profile-information skillsCV">
+                                    <h2>skills</h2>
+                                    <ul>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>JavaScript</li>
+                                        <li>MicroSoft</li>
+                                        <li>PHP</li>
+                                        <li>MySql</li>
+                                    </ul>
+                                </div>
+                                <div class="profile-information languageCV">
+                                    <h2>language</h2>
+                                    <ul>
+                                        <li>Arabic</li>
+                                        <li>English</li>
+                                        <li>French</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column colbold">
+                                <div class="about-user">
+                                    <h2>about me</h2>
+                                    <p id="about-me-cv"></p>
+                                </div>
+                                <div class="experience-user">
+                                    <h2>experience</h2>
+                                    <div id="col_experience"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="fill-col right">
+                <div class="header_titles">
+                    <div class="columnEditor personal_details">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>personal details</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section personal-ed764">
+                                <form action="" id="personalForm" method="">
+                                    <div class="formContainer">
+                                        <div>
+                                            <label for="user-profile">picture</label>
+                                            <div class="yt75">
+                                                <input type="file" name="picture" id="user-profile">
+                                            </div>
+                                        </div>
+                                        <div class="t54hdy">
+                                            <div>
+                                                <section class="section_64u firstSection">
+                                                    <label for="first-name">first name</label>
+                                                    <input type="text" name="first-name" id="first-name"
+                                                        class="form_input" placeholder="first name">
+                                                </section>
+                                                <section class="section_64u secondSection">
+                                                    <label for="last-name">last name</label>
+                                                    <input type="text" name="last-name" id="last-name"
+                                                        class="form_input" placeholder="last name">
+                                                </section>
+                                            </div>
+                                            <div class="lastSection">
+                                                <label for="email-address">email address</label>
+                                                <input type="text" name="email-address" id="email-address"
+                                                    class="form_input" placeholder="email address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formY65t">
+                                        <div class="Headline">
+                                            <label for="Headline">Headline</label>
+                                            <input type="text" name="Headline" id="Headline" class="form_input"
+                                                placeholder="Headline">
+                                        </div>
+                                        <div class="PhoneNumber">
+                                            <label for="PhoneNumber">Phone number</label>
+                                            <input type="text" name="PhoneNumber" id="PhoneNumber" class="form_input"
+                                                placeholder="Phone number">
+                                        </div>
+                                        <div class="Address">
+                                            <label for="Address">Address</label>
+                                            <input type="text" name="Address" id="Address" class="form_input"
+                                                placeholder="Address">
+                                        </div>
+                                        <div class="DateBirth">
+                                            <label for="DateBirth">Date of birth</label>
+                                            <input type="date" name="DateBirth" id="DateBirth" class="form_input"
+                                                placeholder="Date of birth">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnEditor profile">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>profile</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section profile-yr6t">
+                                <form action="" method="" id="profileForm">
+                                    <div style="position: relative;">
+                                        <label for="aboutme">Description</label>
+                                        <span class="lengthConatiner"><span class="length">4</span>/300</span>
+                                        <textarea cols="30" rows="7" name="aboutme" id="aboutme"
+                                            class="about-ytc7">I am</textarea>
+                                        <div class="text-editor">
+                                            <ul>
+                                                <span>
+                                                    <li><input type="number" name="size" id="size" min="6" max="60"
+                                                            value="16"></li>
+                                                </span>
+                                                <span>
+                                                    <li><button type="button"><box-icon name='bold'></box-icon></button>
+                                                    </li>
+                                                    <li><button type="button"><box-icon
+                                                                name='italic'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon
+                                                                name='underline'></box-icon></button></li>
+                                                </span>
+                                                <span>
+                                                    <li><button type="button"><box-icon
+                                                                name='align-left'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon
+                                                                name='align-middle'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon
+                                                                name='align-right'></box-icon></button></li>
+                                                </span>
+                                                <span>
+                                                    <li><input type="color" name="color" id="color"><box-icon
+                                                            name='color-fill'></box-icon></li>
+                                                </span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnEditor education">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>education</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section education-ed764">
+                                <form action="" method="post" id="formEducation">
+                                    <div class="box box1">
+                                        <label for="educationInput">education</label>
+                                        <input type="text" name="educationInput" id="educationInput" class="form_input"
+                                            placeholder="education">
+                                    </div>
+                                    <div class="box box2">
+                                        <div>
+                                            <section class="section_xye64 schoolSection">
+                                                <label for="school-name">school name</label>
+                                                <input type="text" name="school-name" id="school-name" class="form_input" placeholder="school name">
+                                            </section>
+                                            <section class="section_xye64 citySection">
+                                                <label for="city-name">city</label>
+                                                <input type="text" name="city-name" id="city-name" class="form_input" placeholder="city">
+                                            </section>
+                                        </div>
+                                        <div class="dates">
+                                            <section>
+                                                <label for="start-date">Start date</label>
+                                                <div>
+                                                    <select name="start-date-month" class="dateMonth" id="start-date-month"></select>
+                                                    <select name="start-date-year" class="dateYear" id="start-date-year"></select>
+                                                </div>
+                                            </section>
+                                            <section>
+                                                <label for="end-date">End date</label>
+                                                <div class="present">
+                                                    <input type="checkbox" name="present" id="present">
+                                                    <label for="present">Present</label>
+                                                </div>
+                                                <div>
+                                                    <select name="start-date-month" class="dateMonth" id="end-date-month"></select>
+                                                    <select name="start-date-year" class="dateYear" id="end-date-year"></select>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="box box3">
+                                        <div style="position: relative;">
+                                            <label for="education">Description</label>
+                                            <span class="lengthConatiner"><span class="length">9</span>/300</span>
+                                            <textarea cols="30" rows="7" name="education" id="education-description"
+                                                class="edu-ytc7">I studied</textarea>
+                                            <div class="text-editor">
+                                                <ul>
+                                                    <span>
+                                                        <li><input type="number" name="size" id="size" min="6" max="60"
+                                                                value="16"></li>
+                                                    </span>
+                                                    <span>
+                                                        <li><button type="button"><box-icon
+                                                                    name='bold'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='italic'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='underline'></box-icon></button></li>
+                                                    </span>
+                                                    <span>
+                                                        <li><button type="button"><box-icon
+                                                                    name='align-left'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='align-middle'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='align-right'></box-icon></button></li>
+                                                    </span>
+                                                    <span>
+                                                        <li><input type="color" name="color" id="color"><box-icon
+                                                                name='color-fill'></box-icon></li>
+                                                    </span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btnSave">
+                                        <button type="button" id="educationForm">
+                                            <ion-icon name="add-outline"></ion-icon> 
+                                            save 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnEditor employment">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>employment</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section employment-ed764 activeToggle">
+                                <form action="" method="post" id="employmentContainer">
+                                    <div class="box box1">
+                                        <label for="position-post">Position</label>
+                                        <input type="text" name="Position" id="position-post" class="form_input"
+                                            placeholder="Position">
+                                    </div>
+                                    <div class="box box2">
+                                        <div>
+                                            <section class="section_xye64EM EmploymentSection">
+                                                <label for="employment">Company</label>
+                                                <input type="text" name="Employment" id="employment" class="form_input" placeholder="Company">
+                                            </section>
+                                            <section class="section_xye64EM citySection">
+                                                <label for="city-nameE">city</label>
+                                                <input type="text" name="city-nameE" id="city-nameE" class="form_input" placeholder="city">
+                                            </section>
+                                        </div>
+                                        <div class="EmployerDates">
+                                            <section>
+                                                <label for="start-month-dateE">Start date</label>
+                                                <div>
+                                                    <select name="start-date-monthE" class="dateMonth" id="start-date-monthE"></select>
+                                                    <select name="start-date-yearE" class="dateYear" id="start-date-yearE"></select>
+                                                </div>
+                                            </section>
+                                            <section>
+                                                <label for="end-date-monthE">End date</label>
+                                                <div class="em_present">
+                                                    <input type="checkbox" name="empresent" id="em_present">
+                                                    <label for="em_present">Present</label>
+                                                </div>
+                                                <div>
+                                                    <select name="end-date-month" class="dateMonth" id="end-date-monthE"></select>
+                                                    <select name="end-date-yearE" class="dateYear" id="end-date-yearE"></select>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="box box3">
+                                        <div style="position: relative;">
+                                            <label for="education">Description</label>
+                                            <span class="lengthConatiner"><span class="length">9</span>/300</span>
+                                            <textarea cols="30" rows="7" name="education" id="education-description-E"
+                                                class="edu-ytc7">I Word at</textarea>
+                                            <div class="text-editor">
+                                                <ul>
+                                                    <span>
+                                                        <li><input type="number" name="size" id="size" min="6" max="60"
+                                                                value="16"></li>
+                                                    </span>
+                                                    <span>
+                                                        <li><button type="button"><box-icon
+                                                                    name='bold'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='italic'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='underline'></box-icon></button></li>
+                                                    </span>
+                                                    <span>
+                                                        <li><button type="button"><box-icon
+                                                                    name='align-left'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='align-middle'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon
+                                                                    name='align-right'></box-icon></button></li>
+                                                    </span>
+                                                    <span>
+                                                        <li><input type="color" name="color" id="color"><box-icon
+                                                                name='color-fill'></box-icon></li>
+                                                    </span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btnSave">
+                                        <button type="button" id="employmentForm">
+                                            <ion-icon name="add-outline"></ion-icon> 
+                                            save 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnEditor skills">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>skills</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section skill-ed764">
+                                <form action="" method="" id="formskill">
+                                    <div class="skillCon">
+                                        <section>
+                                            <label for="skill">skill</label>
+                                            <input type="text" name="skill" id="skill" class="form_input"
+                                                placeholder="skill">
+                                        </section>
+                                        <section>
+                                            <label for="skill">level</label>
+                                            <input type="text" name="level-text" id="level-text" value="basic">
+                                            <input type="range" name="level-skill" value="0" id="level-skill" min="0"
+                                                max="4" class="form_input">
+                                        </section>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnEditor languages">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>languages</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section language-ed764">
+                                <form action="" method="" id="formlanguage">
+                                    <div class="skillConL">
+                                        <section>
+                                            <label for="Language">Language</label>
+                                            <input type="text" name="language" id="language" class="form_input"
+                                                placeholder="Language">
+                                        </section>
+                                        <section>
+                                            <label for="Language">level</label>
+                                            <input type="text" name="language-text" id="language-text" value="basic">
+                                            <input type="range" name="language-level" value="0" id="language-level"
+                                                min="0" max="4" class="form_input">
+                                        </section>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnEditor hobbies">
+                        <div class="col_container">
+                            <div class="col_header">
+                                <h3>hobbies</h3>
+                                <ion-icon class="toggle" name="add-outline"></ion-icon>
+                            </div>
+                            <div class="fill_section hobbies-ed764">
+                                <form action="" method="">
+                                    <div class="">
+                                        <section>
+                                            <label for="hobby">hobby</label>
+                                            <input type="text" name="hobby" id="hobby" class="form_input"
+                                                placeholder="hobby">
+                                        </section>
+                                    </div>
+                                    <div class="btnSave">
+                                        <button type="button" id="hobbyForm">
+                                            <ion-icon name="add-outline"></ion-icon> save </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../assests/js/editor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
