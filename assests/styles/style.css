@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/euclid-circular-a');
+
+
+
+:root {
+    --second-main-color: #21BF73;
+    --first-main-color: #1a91f0;
+    --footer-color: #eaeaead1;
+    --footer-title-c: #ffeb3b;
+    --main-title-c: #041731;
+    --slogan-color: #525252;
+    --title-color: #202020;
+    --weight: #ffffff;
+    --black: #000000;
+}
+
+::placeholder {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+::placeholder,
+select,
+option,
+textarea,
+input {
+    font-family: "Poppins", sans-serif;
+}
+
+::selection {
+    background-color: var(--first-main-color);
+    color: var(--weight);
+}
+
+*,
+::before,
+::after {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20;
+}
+
+ul,
+li,
+ol {
+    list-style-type: none;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--weight);
+}
+
+header .nav {
+    background-color: var(--weight);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 15vh;
+    box-shadow: 0px -16px 66px 9px #0000001a;
+    position: relative;
+}
+
+header .nav nav ul li {
+    display: inline-block;
+    margin: 10px 12px;
+}
+
+header .nav nav ul li a,
+header .nav nav ul li {
+    font-size: 1.3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    cursor: pointer;
+    user-select: none;
+}
+
+ul li:checked {
+    background-color: #09ff00;
+    color: #1a91f0;
+}
+
+header .nav nav ul li ion-icon {
+    display: inline-block;
+    font-size: 15px;
+    margin-left: -3px;
+    color: var(--main-title-c);
+    vertical-align: middle;
+}
+
+.parent {
+    position: relative;
+}
+
+#drop {
+    position: absolute;
+    display: none;
+    transform: translate(0rem, 1rem);
+    background-color: var(--weight);
+    box-shadow: 0px 8px 50px 8px rgba(0, 0, 0, 0.1);
+}
+
+#drop li {
+    margin: 0;
+    border-left: 2px solid var(--first-main-color);
+    padding: 6px 1px 6px 5px;
+    width: 10rem;
+    transition: all ease-in-out 0.3s;
+}
+
+#drop li:last-child {
+    margin: 5px 0 0 0;
+}
+
+#drop li a {
+    font-size: 1.01rem;
+    padding: 4px 0px 4px 5px;
+    color: var(--slogan-color);
+    font-weight: 500;
+    text-transform: lowercase;
+    display: inline-block;
+}
+
+#drop li:hover {
+    background-color: var(--first-main-color);
+}
+
+#drop li:hover a {
+    color: var(--weight);
+}
+
+#drop.show {
+    display: block;
+}
+
+#rotate.icoRotate {
+    transform: rotate(180deg);
+}
+
+
+.mainContainer {
+    background-color: var(--weight);
+    background-image: url(assests/wave-main.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    height: 100%;
+}
+
+main .mainHeader {
+    width: 100%;
+    min-height: 125vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+main .mainHeader .left,
+main .mainHeader .right {
+    width: 47%;
+}
+
+main .mainHeader .left .textContent h1 {
+    text-wrap: balance;
+    text-transform: capitalize;
+    font-size: 3.6rem;
+    line-height: 1.1;
+    margin-top: 6rem;
+    color: var(--main-title-c);
+    font-weight: 800;
+}
+
+main .mainHeader .left .textContent p {
+    font-size: 1.2rem;
+    margin: 14px 0;
+    font-weight: 300;
+    text-wrap: balance;
+}
+
+main .mainHeader .right .imgContent {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+main .mainHeader .right .imgContent img {
+    animation: slide-left 1s ease-in-out 0.4s both
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+main .mainHeader .right .imgContent img {
+    width: 80%;
+    float: right;
+}
+
+main .mainHeader .left .btnSetion {
+    margin: 12px 0;
+}
+
+main .mainHeader .left .btnSetion button,
+.getBtn .regBtn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    background-color: var(--first-main-color);
+    color: var(--weight);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: middle;
+
+}
+
+.getBtn .regBtn {
+    padding: 6px 20px;
+    font-size: 1.090rem;
+}
+
+.getBtn .login {
+    background-color: transparent;
+    color: var(--first-main-color);
+}
+
+.getBtn .sign {
+    background-color: var(--first-main-color);
+    color: var(--first-main-color);
+    color: var(--weight);
+}
+
+main .mainHeader .left .card {
+    font-size: 1.02rem;
+    color: var(--title-color);
+}
+
+.features {
+    padding: 10px;
+}
+
+.features .headText,
+.createResume .headText {
+    text-align: center;
+    margin: 6rem 0;
+}
+
+.features .headText h1,
+.createResume h1 {
+    font-size: 2.5rem;
+    margin: 10px;
+    text-wrap: balance;
+    color: var(--title-color);
+    word-spacing: -2px;
+}
+
+.features .headText p,
+.createResume .headText p {
+    font-size: 1.3rem;
+    text-wrap: balance;
+    color: var(--slogan-color);
+}
+
+.column {
+    width: 70rem;
+    margin: 10px auto;
+    font-family: 'Euclid Circular A', sans-serif;
+}
+
+.column .col {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-wrap: balance;
+    margin-top: 4rem;
+}
+
+.column .col .contText h2 {
+    font-size: 3.6rem;
+    line-height: 1.1;
+    margin: 10px 0;
+    color: var(--main-title-c);
+}
+
+.column .col .contText p {
+    font-size: 1.1rem;
+    color: var(--slogan-color);
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.column .col .contText,
+.column .col .contImg {
+    width: 50%;
+}
+
+.column .col .contText .btncol {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 15px 0;
+    background-color: var(--first-main-color);
+    color: var(--weight);
+    cursor: pointer;
+}
+
+.createResume {
+    padding: 3.4rem 0;
+    margin-top: 8rem;
+}
+
+.formCreaet .formBtn {
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.formCreaet .formBtn button {
+    padding: 15px 20px;
+    width: 20rem;
+    font-size: 1.095rem;
+    text-transform: capitalize;
+    margin: 10px 2px 0 2px;
+    color: var(--weight);
+    text-align: left;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.formCreaet .formBtn .removeSwitch {
+    background-color: #dddada4d;
+    color: #7a7878;
+}
+
+.formCreaet .formBtn .activeSwitch {
+    background-color: var(--second-main-color);
+    color: var(--weight);
+}
+
+
+.formCreaet .formResult1 {
+    width: 61.1rem;
+    margin: 0 auto;
+    min-height: 20rem;
+    padding: 10px;
+    background-color: var(--weight);
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 77px 8px #0000001a;
+}
+
+.formCreaet .formResult .content {
+    display: flex;
+    padding: 0 20px 0 1.4rem;
+}
+
+.formCreaet .formResult .content {
+    display: none;
+}
+
+.formCreaet .formResult .content.activeContent {
+    display: flex;
+}
+
+.formCreaet .formResult .content .contentLeft h3 {
+    color: var(--second-main-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 2rem 0 0.5rem 0;
+}
+
+.formCreaet .formResult .content .contentLeft p {
+    font-size: 1.1rem;
+    color: var(--slogan-color);
+}
+
+.formCreaet .formResult .content .contentLeft {
+    width: 38rem;
+}
+
+.formCreaet .formResult .content .contentRight {
+    width: 21.1rem;
+}
+
+.formCreaet .formResult .content .contentRight img {
+    float: right;
+    width: 100%;
+}
+
+footer .footHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2rem;
+    width: fit-content;
+    margin: 4rem auto 5rem auto;
+    border-radius: 10px;
+    width: 90%;
+}
+
+footer .footHead .footLeft {
+    width: 68%;
+}
+
+footer .footHead .footLeft h2 {
+    font-weight: 400;
+    color: var(--slogan-color);
+    text-wrap: balance;
+}
+
+footer .footHead .footRight {
+    width: 45%;
+}
+
+.footHead .footRight .footBtn .footBtn {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-wrap: nowrap;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.footRight .footBtn a.getStarted {
+    background-color: var(--first-main-color);
+    border: 3px solid var(--first-main-color);
+    color: var(--weight);
+    margin-right: 10px;
+
+}
+
+.footRight .footBtn a.leMore {
+    color: var(--second-main-color);
+    border: 2.6px solid var(--second-main-color);
+}
+
+footer .mainFooter {
+    display: flex;
+    justify-content: space-around;
+    padding: 4.3rem 0 6rem 0;
+    background-color: var(--main-title-c);
+    height: auto;
+}
+
+footer .mainFooter .about {
+    width: 25%;
+}
+
+footer .mainFooter .footCol.about p,
+footer .mainFooter .footCol.about p .footInd {
+    text-transform: lowercase;
+    font-weight: 300;
+    color: var(--footer-color);
+    font-size: 1.05rem;
+}
+
+footer .mainFooter .footCol.about p .footInd {
+    text-transform: capitalize;
+    color: var(--footer-title-c);
+    text-wrap: nowrap;
+}
+
+footer .mainFooter .footCol.about img {
+    width: 14rem;
+}
+
+footer .mainFooter .footCol h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--footer-title-c);
+    margin-bottom: 13px;
+}
+
+footer .mainFooter .footCol a {
+    color: var(--footer-color);
+    font-size: 1.01rem;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+footer .mainFooter .follow {
+    margin-right: 3vw;
+}
+
+footer .mainFooter .follow a {
+    font-size: 1.6rem;
+    color: var(--weight);
+}
+
+footer .mainFooter .address ion-icon {
+    font-size: 1.3rem;
+}
+
+footer .mainFooter .follow a:nth-child(2) {
+    margin: 0 10px;
+}
+
+footer .mainFooter .footCol ul li a {
+    display: flex;
+    align-items: center;
+}
+
+footer .mainFooter .footCol ion-icon {
+    margin-right: 6px;
+}
+
+footer .resirved {
+    background-color: var(--main-title-c);
+    padding: 2rem 0 1.3rem 0;
+}
+
+footer .resirved h3 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.00rem;
+    color: var(--footer-color);
+}
+
+.toTop.show {
+    right: 20px;
+}
+
+.toTop {
+    position: fixed;
+    right: -63px;
+    bottom: 20px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.toTop .btnTop {
+    padding: 6px 8px;
+    font-size: 2rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    background-color: var(--first-main-color);
+    color: #fff;
+}
