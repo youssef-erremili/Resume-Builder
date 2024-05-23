@@ -1,0 +1,81 @@
+:root {
+    --second-main-color: #21BF73;
+    --first-main-color: #1a91f0;
+    --footer-color: #eaeaead1;
+    --footer-title-c: #ffeb3b;
+    --main-title-c: #041731;
+    --slogan-color: #525252;
+    --title-color: #202020;
+    --weight: #ffffff;
+    --black: #000000;
+}
+
+body {
+    height: 100vh !important;
+}
+
+.template {
+    min-width: 100%;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.template::before,
+.template::after {
+    width: 20rem;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
+}
+
+.template::before {
+    content: "";
+    background-image: url("../assests/blobleft.svg");
+    bottom: 5%;
+    left: 5%;
+    transform: translate(-55%, 50%);
+    -webkit-transform: translate(-55%, 50%);
+    -moz-transform: translate(-55%, 50%);
+    -ms-transform: translate(-55%, 50%);
+    -o-transform: translate(-55%, 50%);
+}
+
+.template::after {
+    content: "";
+    background-image: url("../assests/blobright.svg");
+    right: 5%;
+    top: 5%;
+    transform: translate(50%, -40%);
+    -webkit-transform: translate(50%, -40%);
+    -moz-transform: translate(50%, -40%);
+    -ms-transform: translate(50%, -40%);
+    -o-transform: translate(50%, -40%);
+}
+
+.template .templateHead {
+    text-align: center;
+    margin-top: 5rem;
+    color: var(--main-title-c);
+}
+
+.template .templateHead h1 {
+    font-size: 4rem;
+    width: 50rem;
+    margin: 10px auto;
+    line-height: 4.5rem;
+    text-transform: capitalize;
+}
+
+.template .templateHead p {
+    color: var(--slogan-color);
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    margin: 10px 0;
+    display: inline-block;
+    width: 60rem;
+    text-wrap: balance;
+}
