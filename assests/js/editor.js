@@ -184,19 +184,20 @@ calcLength(employmentContainer, lengthChart[2], education_descriptionE, 300)
 save_education.addEventListener("click", () => {
     // let profile_information = document.getElementsByClassName("educationCV")
     let col_education = document.getElementById("col_education")
-
+    let aa = start_date_year.value
+    let bb = start_date_month.value
+    let cc = end_date_month.value
+    let dd = end_date_year.value
     template = `
         <ul>
             <li>
                 <h3>${education_input.value}</h3>
                 <h5>${school_name.value}</h5>
-                <p>${start_date_year.value} ${end_date_year.value} - ${city_name.value}</p>
+                <p>${bb}/${aa}  ${cc}/${dd}  ${city_name.value}</p>
             </li>
         </ul>
     `
     col_education.innerHTML += template;
-    // end_date_month.value
-    // end_date_year.value
     // education_description.value
     // present_check.checked
 })
