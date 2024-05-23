@@ -1,0 +1,195 @@
+:root {
+    --second-main-color: #21BF73;
+    --first-main-color: #1a91f0;
+    --footer-color: #eaeaead1;
+    --footer-title-c: #ffeb3b;
+    --main-title-c: #041731;
+    --slogan-color: #525252;
+    --title-color: #202020;
+    --weight: #ffffff;
+    --black: #000000;
+}
+
+.topics .topic {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.topics .topic .topicImg {
+    width: 32rem;
+}
+
+.topics .topic .topicImg img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.topics .topic .topicContent {
+    width: 40rem;
+    padding-left: 2rem;
+}
+
+.topicContent .topicTitle .admin {
+    padding: 5px 0;
+}
+
+.topicContent .topicTitle .admin h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--slogan-color);
+    text-transform: capitalize;
+}
+
+.topicContent .topicTitle h2.title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-wrap: balance;
+    line-height: 2.6rem;
+    color: var(--main-title-c);
+}
+
+.topicContent .topicTitle .topicDescr p {
+    color: var(--slogan-color);
+    font-size: 1.02rem;
+    text-wrap: balance;
+    margin: 8px 0;
+}
+
+.topicContent .topicTitle .topicFooter {
+    display: flex;
+}
+
+.topicTitle .topicDate .publishBy strong {
+    font-weight: 600;
+    font-size: 1.09rem;
+    text-transform: capitalize;
+    color: var(--main-title-c);
+}
+
+.topicTitle .topicDate .date {
+    display: flex;
+}
+
+.topicTitle .topicDate .date p {
+    font-size: 0.8rem;
+    color: var(--slogan-color);
+    margin-right: 15px;
+}
+
+.topicContent .topicTitle .readBlog {
+    margin: 10px 15px 0 0;
+}
+
+.topicContent .topicTitle .readBlog a {
+    font-size: 1.10rem;
+    background-color: var(--first-main-color);
+    color: var(--weight);
+    padding: 7px 14px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+
+/* topic reader */
+
+.head .headImg {
+    width: 80%;
+    padding: 10px;
+    margin: 1.2rem auto;
+}
+
+.head .headImg img {
+    width: 100%;
+    height: 40rem;
+}
+
+.middleTopic {
+    width: 70%;
+    margin: 10px auto;
+    padding-left: 4rem;
+}
+
+.middleTopic .topicTitle h2 {
+    margin: 15px 0;
+    font-size: 2.9rem;
+    text-wrap: balance;
+    color: var(--main-title-c);
+    line-height: 3.2rem;
+}
+
+.middleTopic .topicTitle .dateShare p {
+    font-size: 0.9rem;
+    color: var(--first-main-color);
+    display: inline-block;
+    width: fit-content;
+    margin-right: 14px;
+}
+
+.middleTopic h3.subTitle {
+    font-size: 1.5rem;
+    color: var(--main-title-c);
+}
+
+.middleTopic p {
+    color: var(--slogan-color);
+    font-size: 1.09rem;
+    margin: 10px 0 12px 14px;
+    width: 90%;
+}
+
+.m43reR {
+    display: flex;
+}
+
+.sideLeft,
+.sideRight {
+    background-color: var(--weight);
+    width: 20rem;
+    border-radius: 5px;
+    height: 30rem;
+    position: sticky;
+    top: 2rem;
+    box-shadow: -2px 10px 30px 0px #c2c2c270;
+}
+.sideLeft{
+    left: 1.3rem;
+}
+.sideRight {
+    right: 2rem;
+    background-color: var(--first-main-color);
+    background-image: url(img/resume.png);
+    background-size: 12rem;
+    background-repeat: no-repeat;
+    background-position: 63% 3%;
+    text-align: center;
+}
+.sideRight .boxAd{
+    margin-top: 14rem;
+    color: var(--weight);
+    padding: 10px 0.5rem;
+    text-wrap: balance;
+}
+.sideRight .boxAd h3{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.sideRight .boxAd p{
+    font-weight: 300;
+    font-size: 1.02rem;
+    padding: 8px 0;
+}
+.sideRight .boxAd section{
+    border-top: 1px solid var(--footer-color);
+    margin: 0.5rem 1rem;
+}
+.sideRight .boxAd section button{
+    padding: 10px 20px;
+    font-size: 1.03rem;
+    color: var(--main-title-c);
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: var(--footer-title-c);
+    margin-top: 1.1rem;
+    cursor: pointer;
+}
