@@ -193,7 +193,7 @@ save_education.addEventListener("click", () => {
             <li>
                 <h3>${education_input.value}</h3>
                 <h5>${school_name.value}</h5>
-                <p>${bb}/${aa}  ${cc}/${dd}  ${city_name.value}</p>
+                <p>${bb}/${aa} - ${cc}/${dd}  ${city_name.value}</p>
             </li>
         </ul>
     `
