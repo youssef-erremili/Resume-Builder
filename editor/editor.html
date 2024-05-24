@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="../assests/styles/editor.css">
     <link rel="stylesheet" href="../assests/styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <style>
+    <!-- <style>
         * {
             padding: 0%;
             margin: 0%;
@@ -157,67 +158,96 @@
             display: inline-block;
             font-weight: 500;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
     <main>
         <div class="fill_container">
             <div class="fill-col left">
-                <main>
-                    <div class="templateContainer">
-                        <header>
+                <main
+                    style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
+                    <div class="templateContainer"
+                        style="background-color: #f8f8f8; width: inherit; height: inherit; padding: 2rem 1.5rem;">
+                        <header
+                            style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
                             <div class="names">
-                                <h1><strong id="first-name-cv"></strong></h1>
-                                <h1 id="last-name-cv"></h1>
-                                <span id="headline-cv" class="headline"></span>
+                                <h1
+                                    style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
+                                    <strong id="first-name-cv"></strong>
+                                </h1>
+                                <h1 id="last-name-cv"
+                                    style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
+                                </h1>
+                                <span id="headline-cv" class="headline"
+                                    style="font-weight: 400; font-size: 1.2rem; color: #9f9f9f; text-transform: uppercase;"></span>
                             </div>
-                            <div class="socials">
+                            <div class="socials" style="margin-top: 0.4rem;">
                                 <ul>
-                                    <li><i class="ri-map-pin-2-line"></i><span id="address-location-cv"></span></li>
-                                    <li><i class="ri-smartphone-line"></i><span id="phone-cv"></span></li>
-                                    <li><i class="ri-mail-line"></i><span id="email-cv"></span></li>
-                                    <li><i class="ri-calendar-line"></i><span id="date-birth-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-map-pin-2-line"
+                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
+                                            id="address-location-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-smartphone-line"
+                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
+                                            id="phone-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-mail-line"
+                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
+                                            id="email-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-calendar-line"
+                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
+                                            id="date-birth-cv"></span></li>
                                 </ul>
                             </div>
                         </header>
-                        <div class="sides">
-                            <div class="column colthin">
-                                <div class="image">
-                                    <img src="../assests/image/profile-user.jpg" alt="profile user">
+                        <div class="sides" style="width: inherit; height: inherit; display: flex;">
+                            <div class="column colthin"
+                                style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
+                                <div class="image" style="width: 100%; text-align: center;">
+                                    <img src="../assests/image/profile-user.jpg" alt="profile user"
+                                        style="width: 50%; height: 50%; border-radius: 6px;">
                                 </div>
-                                <div class="profile-information educationCV">
-                                    <h2>education</h2>
+                                <div class="profile-information educationCV" style="margin: -0.4rem 0 0 0.5rem;">
+                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
+                                        education</h2>
                                     <div id="col_education"></div>
                                 </div>
-                                <div class="profile-information skillsCV">
-                                    <h2>skills</h2>
+                                <div class="profile-information skillsCV" style="margin: -0.4rem 0 0 0.5rem;">
+                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
+                                        skills</h2>
                                     <ul>
-                                        <li>HTML5</li>
-                                        <li>CSS3</li>
-                                        <li>JavaScript</li>
-                                        <li>MicroSoft</li>
-                                        <li>PHP</li>
-                                        <li>MySql</li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">HTML5</li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">CSS3</li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">JavaScript</li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">MicroSoft</li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">PHP</li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">MySql</li>
                                     </ul>
                                 </div>
-                                <div class="profile-information languageCV">
-                                    <h2>language</h2>
+                                <div class="profile-information languageCV" style="margin: -0.4rem 0 0 0.5rem;">
+                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
+                                        language</h2>
                                     <ul>
-                                        <li>Arabic <span>(native)</span></li>
-                                        <li>English <span>(advenced)</span></li>
-                                        <li>French <span>(basic)</span></li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">Arabic <span>(native)</span>
+                                        </li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">English
+                                            <span>(advenced)</span></li>
+                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">French <span>(basic)</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="column colbold">
-                                <div class="about-user">
-                                    <h2>about me</h2>
-                                    <p id="about-me-cv"></p>
+                            <div class="column colbold" style="height: inherit; width: 60%; padding: 0 2rem;">
+                                <div class="about-user" style="border-bottom: 2px solid #eaeaea; padding-bottom: 2rem;">
+                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
+                                        about me</h2>
+                                    <p id="about-me-cv"
+                                        style="font-size: 1.01rem; font-weight: 400; color: #8d8d8d; margin: 0.3rem 0;">
+                                    </p>
                                 </div>
                                 <div class="experience-user">
-                                    <h2>experience</h2>
-                                    <div id="col_experience"></div>
+                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
+                                        experience</h2>
+                                    <div id="col_experience" style="margin: 1.5rem 0;"></div>
                                 </div>
                             </div>
                         </div>
@@ -350,19 +380,23 @@
                                         <div>
                                             <section class="section_xye64 schoolSection">
                                                 <label for="school-name">school name</label>
-                                                <input type="text" name="school-name" id="school-name" class="form_input" placeholder="school name">
+                                                <input type="text" name="school-name" id="school-name"
+                                                    class="form_input" placeholder="school name">
                                             </section>
                                             <section class="section_xye64 citySection">
                                                 <label for="city-name">city</label>
-                                                <input type="text" name="city-name" id="city-name" class="form_input" placeholder="city">
+                                                <input type="text" name="city-name" id="city-name" class="form_input"
+                                                    placeholder="city">
                                             </section>
                                         </div>
                                         <div class="dates">
                                             <section>
                                                 <label for="start-date">Start date</label>
                                                 <div>
-                                                    <select name="start-date-month" class="dateMonth" id="start-date-month"></select>
-                                                    <select name="start-date-year" class="dateYear" id="start-date-year"></select>
+                                                    <select name="start-date-month" class="dateMonth"
+                                                        id="start-date-month"></select>
+                                                    <select name="start-date-year" class="dateYear"
+                                                        id="start-date-year"></select>
                                                 </div>
                                             </section>
                                             <section>
@@ -372,8 +406,10 @@
                                                     <label for="present">Present</label>
                                                 </div>
                                                 <div>
-                                                    <select name="start-date-month" class="dateMonth" id="end-date-month"></select>
-                                                    <select name="start-date-year" class="dateYear" id="end-date-year"></select>
+                                                    <select name="start-date-month" class="dateMonth"
+                                                        id="end-date-month"></select>
+                                                    <select name="start-date-year" class="dateYear"
+                                                        id="end-date-year"></select>
                                                 </div>
                                             </section>
                                         </div>
@@ -416,9 +452,7 @@
                                     </div>
                                     <div class="btnSave">
                                         <button type="button" id="educationForm">
-                                            <ion-icon name="add-outline"></ion-icon> 
-                                            save 
-                                        </button>
+                                            <ion-icon name="add-outline"></ion-icon> save </button>
                                     </div>
                                 </form>
                             </div>
@@ -441,19 +475,23 @@
                                         <div>
                                             <section class="section_xye64EM EmploymentSection">
                                                 <label for="employment">Company</label>
-                                                <input type="text" name="Employment" id="employment" class="form_input" placeholder="Company">
+                                                <input type="text" name="Employment" id="employment" class="form_input"
+                                                    placeholder="Company">
                                             </section>
                                             <section class="section_xye64EM citySection">
                                                 <label for="city-nameE">city</label>
-                                                <input type="text" name="city-nameE" id="city-nameE" class="form_input" placeholder="city">
+                                                <input type="text" name="city-nameE" id="city-nameE" class="form_input"
+                                                    placeholder="city">
                                             </section>
                                         </div>
                                         <div class="EmployerDates">
                                             <section>
                                                 <label for="start-month-dateE">Start date</label>
                                                 <div>
-                                                    <select name="start-date-monthE" class="dateMonth" id="start-date-monthE"></select>
-                                                    <select name="start-date-yearE" class="dateYear" id="start-date-yearE"></select>
+                                                    <select name="start-date-monthE" class="dateMonth"
+                                                        id="start-date-monthE"></select>
+                                                    <select name="start-date-yearE" class="dateYear"
+                                                        id="start-date-yearE"></select>
                                                 </div>
                                             </section>
                                             <section>
@@ -463,8 +501,10 @@
                                                     <label for="em_present">Present</label>
                                                 </div>
                                                 <div>
-                                                    <select name="end-date-month" class="dateMonth" id="end-date-monthE"></select>
-                                                    <select name="end-date-yearE" class="dateYear" id="end-date-yearE"></select>
+                                                    <select name="end-date-month" class="dateMonth"
+                                                        id="end-date-monthE"></select>
+                                                    <select name="end-date-yearE" class="dateYear"
+                                                        id="end-date-yearE"></select>
                                                 </div>
                                             </section>
                                         </div>
@@ -507,9 +547,7 @@
                                     </div>
                                     <div class="btnSave">
                                         <button type="button" id="employmentForm">
-                                            <ion-icon name="add-outline"></ion-icon> 
-                                            save 
-                                        </button>
+                                            <ion-icon name="add-outline"></ion-icon> save </button>
                                     </div>
                                 </form>
                             </div>
