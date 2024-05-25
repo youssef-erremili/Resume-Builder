@@ -8,10 +8,7 @@
     --title-color: #202020;
     --weight: #ffffff;
     --black: #000000;
-}
-
-body {
-    height: 100vh !important;
+    --box-color: #EFF2F9;
 }
 
 .template {
@@ -78,4 +75,74 @@ body {
     display: inline-block;
     width: 60rem;
     text-wrap: balance;
+}
+
+.template .galleryTemplates {
+    max-width: 90vw;
+    margin: 4rem auto 1.2rem auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.template .galleryTemplates .templateCol {
+    background-color: var(--box-color);
+    height: 40rem;
+    position: relative;
+}
+
+.template .galleryTemplates .templateCol section:nth-child(1) {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: baseline;
+    padding-top: 2.5rem;
+    justify-content: center;
+    height: fit-content;
+}
+
+.template .galleryTemplates .templateCol section img {
+    width: 80%;
+    border-radius: 0.3rem;
+}
+
+.template .galleryTemplates .templateCol section a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 0.4rem 0.8rem;
+    text-wrap: nowrap;
+    font-size: 1.09rem;
+    text-transform: capitalize;
+    background-color: var(--first-main-color);
+    color: var(--box-color);
+    border-radius: 0.3rem;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.template .galleryTemplates .templateCol:hover a {
+    opacity: 1;
+}
+
+.template .galleryTemplates .templateCol section:nth-child(3) {
+    padding: 0.5rem 2.5rem;
+    display: block;
+    margin: 1.4rem auto;
+}
+
+.template .galleryTemplates .templateCol section:nth-child(3) h3 {
+    font-size: 1.049rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #1e2532;
+}
+
+.template .galleryTemplates .templateCol section:nth-child(3) p {
+    font-size: 0.96rem;
+    font-weight: 300;
+    color: #b9babd;
 }
