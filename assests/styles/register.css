@@ -29,7 +29,7 @@ body {
     background-color: var(--weight);
     min-height: 100vh;
     line-height: 1.5;
-    background-image: url(../assests/Sprinkle.svg);
+    background-image: url(../image/Sprinkle.svg);
     background-size: cover;
     background-position: center;
 }
@@ -41,7 +41,7 @@ body {
     min-height: inherit;
     width: 90%;
     margin: 0 auto;
-    background-image: url(../assests/shape4.svg);
+    background-image: url(../image/shape4.svg);
     background-position: 0 31rem;
     background-size: 35px;
 }

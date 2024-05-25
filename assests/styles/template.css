@@ -87,8 +87,9 @@
 
 .template .galleryTemplates .templateCol {
     background-color: var(--box-color);
-    height: 40rem;
+    height: 38rem;
     position: relative;
+    border-radius: 0.5rem;
 }
 
 .template .galleryTemplates .templateCol section:nth-child(1) {
@@ -135,14 +136,15 @@
 }
 
 .template .galleryTemplates .templateCol section:nth-child(3) h3 {
-    font-size: 1.049rem;
+    font-size: 1.050rem;
     font-weight: 600;
     text-transform: capitalize;
     color: #1e2532;
+    line-height: 2rem;
 }
 
 .template .galleryTemplates .templateCol section:nth-child(3) p {
-    font-size: 0.96rem;
+    font-size: 0.9rem;
     font-weight: 300;
     color: #b9babd;
 }

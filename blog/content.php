@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog - errehub</title>
     <link rel="shortcut icon" href="../assests/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="../assests/styles/style.css">
+    <link rel="stylesheet" href="../assests/styles/blog.css">
 </head>
 
 <body>
@@ -193,12 +193,9 @@
             <div class="footCol follow">
                 <h3>follow us</h3>
                 <ul>
-                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon
-                            name="logo-github"></ion-icon></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon
-                            name="logo-linkedin"></ion-icon></a>
-                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon
-                            name="logo-instagram"></ion-icon></a>
+                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon name="logo-github"></ion-icon></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon name="logo-instagram"></ion-icon></a>
                 </ul>
             </div>
         </div>
