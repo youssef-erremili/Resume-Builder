@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor App</title>
     <link rel="stylesheet" href="../assests/styles/editor.css">
     <link rel="stylesheet" href="../assests/styles/style.css">
-    <link rel="shortcut icon" href="../assests/image/favicon.ico" type="image/x-icon"> 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../assests/image/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
+
 <body>
     <main>
         <div class="fill_container">
             <div class="fill-col left">
-                <main style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
+                <main
+                    style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
                     <div class="templateContainer"
                         style="background-color: #f8f8f8; width: inherit; height: inherit; padding: 2rem 1.5rem;">
                         <header
@@ -46,41 +49,32 @@
                                 </ul>
                             </div>
                         </header>
-                        <div class="sides" style="width: inherit; height: inherit; display: flex;">
+                        <div style="width: inherit; height: inherit; display: flex;">
                             <div class="column colthin"
                                 style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
                                 <div class="image" style="width: 100%; text-align: center;">
                                     <img src="../assests/image/profile-user.jpg" alt="profile user"
                                         style="width: 50%; height: 50%; border-radius: 6px;">
                                 </div>
-                                <div class="profile-information educationCV" style="margin: -0.4rem 0 0 0.5rem;">
+                                <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
                                         education</h2>
-                                    <div id="col_education"></div>
+                                    <div id="col_education" style="text-transform: capitalize;"></div>
                                 </div>
-                                <div class="profile-information skillsCV" style="margin: -0.4rem 0 0 0.5rem;">
+                                <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
                                         skills</h2>
-                                    <ul>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">HTML5</li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">CSS3</li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">JavaScript</li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">MicroSoft</li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">PHP</li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">MySql</li>
-                                    </ul>
+                                    <div id="col_skills"></div>
                                 </div>
-                                <div class="profile-information languageCV" style="margin: -0.4rem 0 0 0.5rem;">
+                                <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        language</h2>
-                                    <ul>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">Arabic <span>(native)</span>
-                                        </li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">English
-                                            <span>(advenced)</span></li>
-                                        <li style="margin: 0.2rem 0; font-size: 0.99rem;">French <span>(basic)</span>
-                                        </li>
-                                    </ul>
+                                        languages</h2>
+                                    <div id="col_language"></div>
+                                </div>
+                                <div style="margin: -0.4rem 0 0 0.5rem;">
+                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
+                                        hoppies</h2>
+                                    <div id="col_hoppy"></div>
                                 </div>
                             </div>
                             <div class="column colbold" style="height: inherit; width: 60%; padding: 0 2rem;">
@@ -100,7 +94,7 @@
                         </div>
                     </div>
                 </main>
-            </div> 
+            </div>
             <div class="fill-col right">
                 <div class="header_titles">
                     <div class="columnEditor personal_details">
@@ -311,7 +305,7 @@
                                 <h3>employment</h3>
                                 <ion-icon class="toggle" name="add-outline"></ion-icon>
                             </div>
-                            <div class="fill_section employment-ed764 activeToggle">
+                            <div class="fill_section employment-ed764">
                                 <form action="" method="post" id="employmentContainer">
                                     <div class="box box1">
                                         <label for="position-post">Position</label>
@@ -421,6 +415,12 @@
                                                 max="4" class="form_input">
                                         </section>
                                     </div>
+                                    <div class="btnSave">
+                                        <button type="button" id="skillForm">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                            save
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -445,6 +445,12 @@
                                             <input type="range" name="language-level" value="0" id="language-level"
                                                 min="0" max="4" class="form_input">
                                         </section>
+                                    </div>
+                                    <div class="btnSave">
+                                        <button type="button" id="LanguageForm">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                            save
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -481,4 +487,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
+
 </html>

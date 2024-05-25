@@ -54,6 +54,7 @@ let present_checkE = document.getElementById("em_present")
 // start here
 // this variable of the skills form
 let save_formskill = document.getElementById("formskill")
+let skillForm = document.getElementById("skillForm")
 let profileFormConatiner = document.getElementById("profileFormConatiner")
 let skill_name = document.getElementById("skill")
 let skill_level = document.getElementById("level-skill")
@@ -62,7 +63,8 @@ let text_level = document.getElementById("level-text")
 
 // start here
 // this variable of the languages form
-let formlanguage = document.getElementById("formlanguage")
+let save_formlanguage = document.getElementById("formlanguage")
+let LanguageForm = document.getElementById("LanguageForm")
 let language_name = document.getElementById("language")
 let language_level = document.getElementById("language-level")
 let language_text = document.getElementById("language-text")
@@ -206,18 +208,18 @@ save_education.addEventListener("click", () => {
 // start here
 // this function is about to get infomartion from employment form
 save_employment.addEventListener("click", () => {
-    let col_experience = document.getElementById("col_experience")
     present_checkE.checked
+    let col_experience = document.getElementById("col_experience")
     let aa = start_date_monthE.value
     let bb = start_date_yearE.value
     let cc = end_date_monthE.value
     let dd = end_date_yearE.value
 
     template = `
-    <div>
-        <h3>${position_post.value} | <span id="styleDate">${aa}/${bb} - ${cc}/${dd}</span></h3>
-            <span>${employment.value} | ${city_nameE.value}</span>
-        <p>${education_descriptionE.value}</p>
+    <div style="margin: 15px 0px;">
+        <section><h3 style="text-transform: uppercase; display:inline-block">${position_post.value} </h3> | <span>${aa}/${bb} - ${cc}/${dd}</span></section>
+        <span style="text-transform: capitalize;margin: 5px 0 5px 0;display: inline-block;">${employment.value} | ${city_nameE.value}</span>
+        <p style="color: #787373;">${education_descriptionE.value}</p>
     </div>
     `
     col_experience.innerHTML += template;
@@ -225,36 +227,38 @@ save_employment.addEventListener("click", () => {
 // end here
 
 // start here
-// this function is about to get infomartion from skills form
-save_formskill.addEventListener("input", () => {
-    skill_name.value
-    for (let i = 0; i < levels.length; i++) {
-        if (skill_level.value == i) {
-            text_level.value = levels[i]
+// this function is about to get infomartion from skills and languges forms
+function manageForm(frm, frmS, aa, bb, cc, varnm, skilnm) {
+    let der = document.getElementById(varnm)
+    frm.addEventListener("input", () => {
+        for (let i = 0; i < aa.length; i++) {
+            if (bb.value == i) {
+                cc.value = aa[i]
+            }
         }
-    }
-})
-// end here
-
-// start here
-// this function is about to get infomartion from languages form
-formlanguage.addEventListener("input", () => {
-    language_name.value
-    language_level.value
-    language_text.value
-
-    for (let i = 0; i < levels.length; i++) {
-        if (language_level.value == i) {
-            language_text.value = levels[i]
-        }
-    }
-})
+    })
+    frmS.addEventListener("click", () => {
+        template = `
+        <ul>
+            <li style="margin: 0.2rem 0 0 0.6rem; font-size: 0.94rem; text-transform: uppercase;">${skilnm.value} <span style="color: #252525;">(${cc.value})</span></li>
+        </ul>`
+        der.innerHTML += template
+    })
+}
+manageForm(save_formskill, skillForm, levels, skill_level, text_level, "col_skills", skill_name)
+manageForm(save_formlanguage, LanguageForm, levels, language_level, language_text, "col_language", language_name)
 // end here
 
 // start here
 // this function is about to get infomartion from hoppies form
 save_hobby.addEventListener("click", () => {
-    hobby_name
+    let col_hoppy = document.getElementById("col_hoppy")
+    template = `
+    <ul>
+        <li style="margin: 0.2rem 0 0 0.6rem; font-size: 0.94rem; text-transform: uppercase;">${hobby_name.value}</li>
+    </ul>`
+    
+    col_hoppy.innerHTML += template
 })
 // end here
 

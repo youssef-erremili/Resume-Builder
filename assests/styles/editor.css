@@ -217,13 +217,6 @@ main .form_input {
     margin: 0.4rem 0;
 }
 
-#styleDate {
-    color: var(--main-title-c);
-    font-weight: 500;
-    margin-left: 0.4rem;
-    font-size: 0.9rem;
-}
-
 .employment-ed764 .box2 .EmployerDates section:nth-child(2),
 .education-ed764 .box2 .dates section:nth-child(2) {
     margin-left: 0.7rem;
@@ -247,11 +240,11 @@ main .form_input {
 }
 
 
-.profile-yr6t .btnSave,
-.hobbies-ed764 .btnSave,
-.employment-ed764 .btnSave,
 .education-ed764 .btnSave,
+.employment-ed764 .btnSave,
 .skill-ed764 .btnSave,
+.language-ed764 .btnSave,
+.hobbies-ed764 .btnSave,
 .languages .language-ed764 section:nth-child(2),
 .skills .skill-ed764 section:nth-child(2),
 .employment-ed764 .box2 .EmployerDates section:nth-child(2),
@@ -290,35 +283,35 @@ main .form_input {
     margin-right: 0.1rem;
 }
 
-.skill-ed764 .btnSave,
-.profile-yr6t .btnSave,
-.hobbies-ed764 .btnSave,
+.education-ed764 .btnSave,
 .employment-ed764 .btnSave,
-.education-ed764 .btnSave {
+.skill-ed764 .btnSave,
+.language-ed764 .btnSave,
+.hobbies-ed764 .btnSave {
     width: fit-content;
     margin: 1.5rem 0 1.5rem 17rem;
 }
 
-.skill-ed764 .btnSave button,
-.profile-yr6t .btnSave button,
-.hobbies-ed764 .btnSave button,
+.education-ed764 .btnSave button,
 .employment-ed764 .btnSave button,
-.education-ed764 .btnSave button {
+.skill-ed764 .btnSave button,
+.language-ed764 .btnSave button,
+.hobbies-ed764 .btnSave button {
     padding: 0.5rem 2.4rem 0.5rem 2.8rem;
     max-width: fit-content !important;
     border-radius: 99px;
     cursor: pointer;
     font-size: 1.2rem;
-    background-color: #000;
+    background-color: var(--second-main-color);
     color: var(--weight);
     text-transform: capitalize;
 }
 
-.skill-ed764 .btnSave button ion-icon,
-.profile-yr6t .btnSave button ion-icon,
-.hobbies-ed764 .btnSave button ion-icon,
+.education-ed764 .btnSave button ion-icon,
 .employment-ed764 .btnSave button ion-icon,
-.education-ed764 .btnSave button ion-icon {
+.skill-ed764 .btnSave button ion-icon,
+.language-ed764 .btnSave button ion-icon,
+.hobbies-ed764 .btnSave button ion-icon {
     position: absolute;
     top: 50%;
     left: 22%;
