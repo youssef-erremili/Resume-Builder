@@ -83,14 +83,20 @@ let dateMonth = document.querySelectorAll(".dateMonth")
 let dateYear = document.querySelectorAll(".dateYear")
 
 
-const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
-const years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]
+const months = ["Month", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+const years = ["Year", 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]
 
 
 function insertData(b1, b2) {
     let option = ""
+    let hidden = "hidden"
     for (let a = 0; a < b2.length; a++) {
-        option += `<option value="${b2[a]}">${b2[a]}</option>`
+        if (a == 0) {
+            option += `<option value="${b2[a]}" ${hidden}>${b2[a]}</option>`
+        }
+        else{
+            option += `<option value="${b2[a]}">${b2[a]}</option>`
+        }
     }
     b1.innerHTML = option
 }
@@ -257,7 +263,7 @@ save_hobby.addEventListener("click", () => {
     <ul>
         <li style="margin: 0.2rem 0 0 0.6rem; font-size: 0.94rem; text-transform: uppercase;">${hobby_name.value}</li>
     </ul>`
-    
+
     col_hoppy.innerHTML += template
 })
 // end here
