@@ -146,6 +146,46 @@ main .form_input {
     color: var(--main-title-c);
 }
 
+main .navbar nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background-color: var(--main-title-c);
+}
+
+main .navbar nav ul li a,
+main .navbar nav ul li span {
+    display: flex;
+    align-items: center;
+}
+
+main .navbar nav ul li span a:nth-child(1){
+    margin-right: 0.5rem;
+}
+
+main .navbar nav ul li a {
+    color: var(--input-color);
+    font-size: 1.09rem;
+    text-transform: capitalize;
+    padding: 0.4rem 1.4rem;
+    border: 1px solid #52525A;
+    border-radius: 0.3rem;
+    font-weight: 300;
+}
+
+main .navbar nav ul li a ion-icon {
+    font-size: 1.2rem;
+}
+
+main .navbar nav ul li:nth-child(1) a ion-icon,
+main .navbar nav ul li:nth-child(3) a ion-icon {
+    margin-right: 0.4rem;
+}
+
+main .navbar nav ul li:nth-child(2) a ion-icon {
+    margin-left: 0.4rem;
+}
 
 .personal-ed764 .t54hdy .section_64u {
     width: 9rem;
