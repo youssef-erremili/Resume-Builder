@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["signup"])) {
         $fullname =   trim(htmlspecialchars($_POST["FullName"]));
         $email_address = trim(htmlspecialchars($_POST["EmailAddress"]));
-        $user_password =  trim( htmlspecialchars($_POST["password"]));
         $user_password = trim(trim(htmlspecialchars(password_hash($user_password, PASSWORD_DEFAULT))));
         $firstQuery = "SELECT * FROM users WHERE email_address = :email_address";
         $stmt = $serverConnection->prepare($firstQuery);
