@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(":email_address", $email_address, PDO::PARAM_STR);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
-            $user_password = $stmt->fetch(PDO::FETCH_ASSOC);
-            if (password_verify($password, $user_password["user_password"])) {
-                $userName = $user_password['full_name'];
-                $_SESSION["username"] = $userName;
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $hashed_password = $row["user_password"];
+            $_SESSION["User-Name"] = $row["full_name"];
+            if (password_verify($password, $hashed_password)) {
                 $_SESSION["loggedin"] = true;
                 header("Location: ../editor/editor.php");
                 exit();
@@ -86,12 +86,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             const notyf = new Notyf();
             if (alertMsg == "Invalid password") {
                 notyf.error({
-                    message: 'Password is uncorrect',
+                    message: 'Password is incorrect',
                     duration: 6000,
                 });
             } else if (alertMsg == "Invalid email") {
                 notyf.error({
-                    message: 'Email Address is uncorrect',
+                    message: 'Email Address is incorrect',
                     duration: 6000,
                 });
             }
