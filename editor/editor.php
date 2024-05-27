@@ -1,3 +1,12 @@
+<?php
+session_start();
+include("../config/config.php");
+if (!isset($_SESSION["loggedin"])) {
+    header("location: ../login/login.php");
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,48 +22,46 @@
 
 <body>
     <main>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href=""><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a></li>
+                    <li><a href="">saved changes <ion-icon name="cloud-done-outline"></ion-icon></a></li>
+                    <li>
+                        <span>
+                            <a href=""><ion-icon name="print-outline"></ion-icon> print</a>
+                            <a href=""><ion-icon name="arrow-down-outline"></ion-icon> download</a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="fill_container">
             <div class="fill-col left">
-                <main
-                    style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
-                    <div class="templateContainer"
-                        style="background-color: #f8f8f8; width: inherit; height: inherit; padding: 2rem 1.5rem;">
-                        <header
-                            style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
+                <main style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
+                    <div class="templateContainer" style="background-color: #f8f8f8; width: inherit; height: inherit; padding: 2rem 1.5rem;">
+                        <header style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
                             <div class="names">
-                                <h1
-                                    style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
+                                <h1 style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
                                     <strong id="first-name-cv"></strong>
                                 </h1>
-                                <h1 id="last-name-cv"
-                                    style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
+                                <h1 id="last-name-cv" style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
                                 </h1>
-                                <span id="headline-cv" class="headline"
-                                    style="font-weight: 400; font-size: 1.2rem; color: #9f9f9f; text-transform: uppercase;"></span>
+                                <span id="headline-cv" class="headline" style="font-weight: 400; font-size: 1.2rem; color: #9f9f9f; text-transform: uppercase;"></span>
                             </div>
                             <div class="socials" style="margin-top: 0.4rem;">
                                 <ul>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-map-pin-2-line"
-                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
-                                            id="address-location-cv"></span></li>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-smartphone-line"
-                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
-                                            id="phone-cv"></span></li>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-mail-line"
-                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
-                                            id="email-cv"></span></li>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-calendar-line"
-                                            style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span
-                                            id="date-birth-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-map-pin-2-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="address-location-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-smartphone-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="phone-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-mail-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="email-cv"></span></li>
+                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-calendar-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="date-birth-cv"></span></li>
                                 </ul>
                             </div>
                         </header>
                         <div style="width: inherit; height: inherit; display: flex;">
-                            <div class="column colthin"
-                                style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
+                            <div class="column colthin" style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
                                 <div class="image" style="width: 100%; text-align: center;">
-                                    <img src="../assests/image/profile-user.jpg" alt="profile user"
-                                        style="width: 50%; height: 50%; border-radius: 6px;">
+                                    <img src="../assests/image/profile-user.jpg" alt="profile user" style="width: 50%; height: 50%; border-radius: 6px;">
                                 </div>
                                 <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
@@ -81,8 +88,7 @@
                                 <div class="about-user" style="border-bottom: 2px solid #eaeaea; padding-bottom: 2rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
                                         about me</h2>
-                                    <p id="about-me-cv"
-                                        style="font-size: 1.01rem; font-weight: 400; color: #8d8d8d; margin: 0.3rem 0;">
+                                    <p id="about-me-cv" style="font-size: 1.01rem; font-weight: 400; color: #8d8d8d; margin: 0.3rem 0;">
                                     </p>
                                 </div>
                                 <div class="experience-user">
@@ -116,42 +122,35 @@
                                             <div>
                                                 <section class="section_64u firstSection">
                                                     <label for="first-name">first name</label>
-                                                    <input type="text" name="first-name" id="first-name"
-                                                        class="form_input" placeholder="first name">
+                                                    <input type="text" name="first-name" id="first-name" class="form_input" placeholder="first name">
                                                 </section>
                                                 <section class="section_64u secondSection">
                                                     <label for="last-name">last name</label>
-                                                    <input type="text" name="last-name" id="last-name"
-                                                        class="form_input" placeholder="last name">
+                                                    <input type="text" name="last-name" id="last-name" class="form_input" placeholder="last name">
                                                 </section>
                                             </div>
                                             <div class="lastSection">
                                                 <label for="email-address">email address</label>
-                                                <input type="text" name="email-address" id="email-address"
-                                                    class="form_input" placeholder="email address">
+                                                <input type="text" name="email-address" id="email-address" class="form_input" placeholder="email address">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="formY65t">
                                         <div class="Headline">
                                             <label for="Headline">Headline</label>
-                                            <input type="text" name="Headline" id="Headline" class="form_input"
-                                                placeholder="Headline">
+                                            <input type="text" name="Headline" id="Headline" class="form_input" placeholder="Headline">
                                         </div>
                                         <div class="PhoneNumber">
                                             <label for="PhoneNumber">Phone number</label>
-                                            <input type="text" name="PhoneNumber" id="PhoneNumber" class="form_input"
-                                                placeholder="Phone number">
+                                            <input type="text" name="PhoneNumber" id="PhoneNumber" class="form_input" placeholder="Phone number">
                                         </div>
                                         <div class="Address">
                                             <label for="Address">Address</label>
-                                            <input type="text" name="Address" id="Address" class="form_input"
-                                                placeholder="Address">
+                                            <input type="text" name="Address" id="Address" class="form_input" placeholder="Address">
                                         </div>
                                         <div class="DateBirth">
                                             <label for="DateBirth">Date of birth</label>
-                                            <input type="date" name="DateBirth" id="DateBirth" class="form_input"
-                                                placeholder="Date of birth">
+                                            <input type="date" name="DateBirth" id="DateBirth" class="form_input" placeholder="Date of birth">
                                         </div>
                                     </div>
                                 </form>
@@ -169,33 +168,25 @@
                                     <div style="position: relative;">
                                         <label for="aboutme">Description</label>
                                         <span class="lengthConatiner"><span class="length">4</span>/300</span>
-                                        <textarea cols="30" rows="7" name="aboutme" id="aboutme"
-                                            class="about-ytc7">I am</textarea>
+                                        <textarea cols="30" rows="7" name="aboutme" id="aboutme" class="about-ytc7">I am</textarea>
                                         <div class="text-editor">
                                             <ul>
                                                 <span>
-                                                    <li><input type="number" name="size" id="size" min="6" max="60"
-                                                            value="16"></li>
+                                                    <li><input type="number" name="size" id="size" min="6" max="60" value="16"></li>
                                                 </span>
                                                 <span>
                                                     <li><button type="button"><box-icon name='bold'></box-icon></button>
                                                     </li>
-                                                    <li><button type="button"><box-icon
-                                                                name='italic'></box-icon></button></li>
-                                                    <li><button type="button"><box-icon
-                                                                name='underline'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon name='italic'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon name='underline'></box-icon></button></li>
                                                 </span>
                                                 <span>
-                                                    <li><button type="button"><box-icon
-                                                                name='align-left'></box-icon></button></li>
-                                                    <li><button type="button"><box-icon
-                                                                name='align-middle'></box-icon></button></li>
-                                                    <li><button type="button"><box-icon
-                                                                name='align-right'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon name='align-left'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon name='align-middle'></box-icon></button></li>
+                                                    <li><button type="button"><box-icon name='align-right'></box-icon></button></li>
                                                 </span>
                                                 <span>
-                                                    <li><input type="color" name="color" id="color"><box-icon
-                                                            name='color-fill'></box-icon></li>
+                                                    <li><input type="color" name="color" id="color"><box-icon name='color-fill'></box-icon></li>
                                                 </span>
                                             </ul>
                                         </div>
@@ -214,30 +205,25 @@
                                 <form action="" method="post" id="formEducation">
                                     <div class="box box1">
                                         <label for="educationInput">education</label>
-                                        <input type="text" name="educationInput" id="educationInput" class="form_input"
-                                            placeholder="education">
+                                        <input type="text" name="educationInput" id="educationInput" class="form_input" placeholder="education">
                                     </div>
                                     <div class="box box2">
                                         <div>
                                             <section class="section_xye64 schoolSection">
                                                 <label for="school-name">school name</label>
-                                                <input type="text" name="school-name" id="school-name"
-                                                    class="form_input" placeholder="school name">
+                                                <input type="text" name="school-name" id="school-name" class="form_input" placeholder="school name">
                                             </section>
                                             <section class="section_xye64 citySection">
                                                 <label for="city-name">city</label>
-                                                <input type="text" name="city-name" id="city-name" class="form_input"
-                                                    placeholder="city">
+                                                <input type="text" name="city-name" id="city-name" class="form_input" placeholder="city">
                                             </section>
                                         </div>
                                         <div class="dates">
                                             <section>
                                                 <label for="start-date">Start date</label>
                                                 <div>
-                                                    <select name="start-date-month" class="dateMonth"
-                                                        id="start-date-month"></select>
-                                                    <select name="start-date-year" class="dateYear"
-                                                        id="start-date-year"></select>
+                                                    <select name="start-date-month" class="dateMonth" id="start-date-month"></select>
+                                                    <select name="start-date-year" class="dateYear" id="start-date-year"></select>
                                                 </div>
                                             </section>
                                             <section>
@@ -247,10 +233,8 @@
                                                     <label for="present">Present</label>
                                                 </div>
                                                 <div>
-                                                    <select name="start-date-month" class="dateMonth"
-                                                        id="end-date-month"></select>
-                                                    <select name="start-date-year" class="dateYear"
-                                                        id="end-date-year"></select>
+                                                    <select name="start-date-month" class="dateMonth" id="end-date-month"></select>
+                                                    <select name="start-date-year" class="dateYear" id="end-date-year"></select>
                                                 </div>
                                             </section>
                                         </div>
@@ -259,33 +243,24 @@
                                         <div style="position: relative;">
                                             <label for="education">Description</label>
                                             <span class="lengthConatiner"><span class="length">9</span>/300</span>
-                                            <textarea cols="30" rows="7" name="education" id="education-description"
-                                                class="edu-ytc7">I studied</textarea>
+                                            <textarea cols="30" rows="7" name="education" id="education-description" class="edu-ytc7">I studied</textarea>
                                             <div class="text-editor">
                                                 <ul>
                                                     <span>
-                                                        <li><input type="number" name="size" id="size" min="6" max="60"
-                                                                value="16"></li>
+                                                        <li><input type="number" name="size" id="size" min="6" max="60" value="16"></li>
                                                     </span>
                                                     <span>
-                                                        <li><button type="button"><box-icon
-                                                                    name='bold'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='italic'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='underline'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='bold'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='italic'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='underline'></box-icon></button></li>
                                                     </span>
                                                     <span>
-                                                        <li><button type="button"><box-icon
-                                                                    name='align-left'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='align-middle'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='align-right'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='align-left'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='align-middle'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='align-right'></box-icon></button></li>
                                                     </span>
                                                     <span>
-                                                        <li><input type="color" name="color" id="color"><box-icon
-                                                                name='color-fill'></box-icon></li>
+                                                        <li><input type="color" name="color" id="color"><box-icon name='color-fill'></box-icon></li>
                                                     </span>
                                                 </ul>
                                             </div>
@@ -309,30 +284,25 @@
                                 <form action="" method="post" id="employmentContainer">
                                     <div class="box box1">
                                         <label for="position-post">Position</label>
-                                        <input type="text" name="Position" id="position-post" class="form_input"
-                                            placeholder="Position">
+                                        <input type="text" name="Position" id="position-post" class="form_input" placeholder="Position">
                                     </div>
                                     <div class="box box2">
                                         <div>
                                             <section class="section_xye64EM EmploymentSection">
                                                 <label for="employment">Company</label>
-                                                <input type="text" name="Employment" id="employment" class="form_input"
-                                                    placeholder="Company">
+                                                <input type="text" name="Employment" id="employment" class="form_input" placeholder="Company">
                                             </section>
                                             <section class="section_xye64EM citySection">
                                                 <label for="city-nameE">city</label>
-                                                <input type="text" name="city-nameE" id="city-nameE" class="form_input"
-                                                    placeholder="city">
+                                                <input type="text" name="city-nameE" id="city-nameE" class="form_input" placeholder="city">
                                             </section>
                                         </div>
                                         <div class="EmployerDates">
                                             <section>
                                                 <label for="start-month-dateE">Start date</label>
                                                 <div>
-                                                    <select name="start-date-monthE" class="dateMonth"
-                                                        id="start-date-monthE"></select>
-                                                    <select name="start-date-yearE" class="dateYear"
-                                                        id="start-date-yearE"></select>
+                                                    <select name="start-date-monthE" class="dateMonth" id="start-date-monthE"></select>
+                                                    <select name="start-date-yearE" class="dateYear" id="start-date-yearE"></select>
                                                 </div>
                                             </section>
                                             <section>
@@ -342,10 +312,8 @@
                                                     <label for="em_present">Present</label>
                                                 </div>
                                                 <div>
-                                                    <select name="end-date-month" class="dateMonth"
-                                                        id="end-date-monthE"></select>
-                                                    <select name="end-date-yearE" class="dateYear"
-                                                        id="end-date-yearE"></select>
+                                                    <select name="end-date-month" class="dateMonth" id="end-date-monthE"></select>
+                                                    <select name="end-date-yearE" class="dateYear" id="end-date-yearE"></select>
                                                 </div>
                                             </section>
                                         </div>
@@ -354,33 +322,24 @@
                                         <div style="position: relative;">
                                             <label for="education">Description</label>
                                             <span class="lengthConatiner"><span class="length">9</span>/300</span>
-                                            <textarea cols="30" rows="7" name="education" id="education-description-E"
-                                                class="edu-ytc7">I Word at</textarea>
+                                            <textarea cols="30" rows="7" name="education" id="education-description-E" class="edu-ytc7">I Word at</textarea>
                                             <div class="text-editor">
                                                 <ul>
                                                     <span>
-                                                        <li><input type="number" name="size" id="size" min="6" max="60"
-                                                                value="16"></li>
+                                                        <li><input type="number" name="size" id="size" min="6" max="60" value="16"></li>
                                                     </span>
                                                     <span>
-                                                        <li><button type="button"><box-icon
-                                                                    name='bold'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='italic'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='underline'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='bold'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='italic'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='underline'></box-icon></button></li>
                                                     </span>
                                                     <span>
-                                                        <li><button type="button"><box-icon
-                                                                    name='align-left'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='align-middle'></box-icon></button></li>
-                                                        <li><button type="button"><box-icon
-                                                                    name='align-right'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='align-left'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='align-middle'></box-icon></button></li>
+                                                        <li><button type="button"><box-icon name='align-right'></box-icon></button></li>
                                                     </span>
                                                     <span>
-                                                        <li><input type="color" name="color" id="color"><box-icon
-                                                                name='color-fill'></box-icon></li>
+                                                        <li><input type="color" name="color" id="color"><box-icon name='color-fill'></box-icon></li>
                                                     </span>
                                                 </ul>
                                             </div>
@@ -405,14 +364,12 @@
                                     <div class="skillCon">
                                         <section>
                                             <label for="skill">skill</label>
-                                            <input type="text" name="skill" id="skill" class="form_input"
-                                                placeholder="skill">
+                                            <input type="text" name="skill" id="skill" class="form_input" placeholder="skill">
                                         </section>
                                         <section>
                                             <label for="skill">level</label>
                                             <input type="text" name="level-text" id="level-text" value="basic">
-                                            <input type="range" name="level-skill" value="0" id="level-skill" min="0"
-                                                max="4" class="form_input">
+                                            <input type="range" name="level-skill" value="0" id="level-skill" min="0" max="4" class="form_input">
                                         </section>
                                     </div>
                                     <div class="btnSave">
@@ -436,14 +393,12 @@
                                     <div class="skillConL">
                                         <section>
                                             <label for="Language">Language</label>
-                                            <input type="text" name="language" id="language" class="form_input"
-                                                placeholder="Language">
+                                            <input type="text" name="language" id="language" class="form_input" placeholder="Language">
                                         </section>
                                         <section>
                                             <label for="Language">level</label>
                                             <input type="text" name="language-text" id="language-text" value="basic">
-                                            <input type="range" name="language-level" value="0" id="language-level"
-                                                min="0" max="4" class="form_input">
+                                            <input type="range" name="language-level" value="0" id="language-level" min="0" max="4" class="form_input">
                                         </section>
                                     </div>
                                     <div class="btnSave">
@@ -467,8 +422,7 @@
                                     <div class="">
                                         <section>
                                             <label for="hobby">hobby</label>
-                                            <input type="text" name="hobby" id="hobby" class="form_input"
-                                                placeholder="hobby">
+                                            <input type="text" name="hobby" id="hobby" class="form_input" placeholder="hobby">
                                         </section>
                                     </div>
                                     <div class="btnSave">
@@ -483,9 +437,19 @@
             </div>
         </div>
     </main>
+    <script>
+        // document.addEventListener('DOMContentLoaded', (event) => {
+        //     const notyf = new Notyf()
+        //     notyf.success({
+        //         message: 'Password is uncorrect',
+        //         duration: 6000,
+        //     });
+        // })
+    </script>
     <script src="../assests/js/editor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 </body>
 
 </html>
