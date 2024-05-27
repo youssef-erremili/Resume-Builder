@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["username"] = $userName;
                 $_SESSION["loggedin"] = true;
                 header("Location: ../editor/editor.php");
+                exit();
             } else {
                 $alertMsg = "Invalid password";
             }
