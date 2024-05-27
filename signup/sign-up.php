@@ -1,27 +1,40 @@
 <?php
-// include_once($alertMsg);
-// include($_SERVER["DOCUMENT_ROOT"]."/resume-builder/assests/php/signup.php"); 
 session_start();
-include($_SERVER["DOCUMENT_ROOT"] . "/resume-builder/config/config.php");
+include("../config/config.php");
+// include($_SERVER["DOCUMENT_ROOT"]."/resume-builder/assests/php/signup.php"); 
 
 $alertMsg = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullname = htmlspecialchars($_POST["FullName"]);
-    $email_address = htmlspecialchars($_POST["EmailAddress"]);
-    $user_password = htmlspecialchars($_POST["password"]);
-    $firstQuery = "SELECT * FROM users WHERE email_address = :email_address";
-    $stmt = $serverConnection->prepare($firstQuery);
-    $stmt->bindParam(":email_address", $email_address, PDO::PARAM_STR);
-    $stmt->execute();
-    if ($stmt->rowCount() > 0) {
-        $alertMsg = "exist";
-    } else {
-        $alertMsg = "new";
+    if (isset($_POST["signup"])) {
+        $fullname =   trim(htmlspecialchars($_POST["FullName"]));
+        $email_address = trim(htmlspecialchars($_POST["EmailAddress"]));
+        $user_password =  trim( htmlspecialchars($_POST["password"]));
+        $user_password = trim(trim(htmlspecialchars(password_hash($user_password, PASSWORD_DEFAULT))));
+        $firstQuery = "SELECT * FROM users WHERE email_address = :email_address";
+        $stmt = $serverConnection->prepare($firstQuery);
+        $stmt->bindParam(":email_address", $email_address, PDO::PARAM_STR);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            $alertMsg = "exist";
+        } else {
+            $secondQuery = "INSERT INTO users(full_name, email_address, user_password) 
+                        VALUES (:full_name, :email_address, :user_password)";
+            $stmt = $serverConnection->prepare($secondQuery);
+            $stmt->bindParam(":full_name", $fullname);
+            $stmt->bindParam(":email_address", $email_address);
+            $stmt->bindParam(":user_password", $user_password);
+            $aa = $stmt->execute();
+            if ($aa) {
+                header("location: ../login/login.php");
+            } else {
+                $alertMsg = "error to sign up";
+            }
+        }
     }
 }
 
 
-$serverConnection = null;
+// $serverConnection = null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +67,6 @@ $serverConnection = null;
             <div class="form">
                 <div class="greetings">
                     <h2>Sign In</h2>
-                    <?php echo $alertMsg; ?>
                     <p>Create a free account today</p>
                 </div>
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" name="form" class="submitForm">
@@ -76,8 +88,8 @@ $serverConnection = null;
                         <img src="../assests/image/show.svg" alt="show-password" class="password" id="passIcon">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </div>
-                    <input type="submit" id="submit" value="Sign in">
-                    <p class="havAccc">Already, I have an account <a href="../log-in/login.html">log in</a></p>
+                    <input type="submit" id="submit" name="signup" value="Sign up">
+                    <p class="havAccc">Already, I have an account <a href="../login/login.php">log in</a></p>
                 </form>
                 <p>By clicking the button, you are agreeing to our <strong><a id="terms" href="">Terms & conditions</a></strong></p>
             </div>
@@ -87,11 +99,16 @@ $serverConnection = null;
         document.addEventListener('DOMContentLoaded', (event) => {
             var alertMsg = "<?php echo $alertMsg; ?>";
             if (alertMsg == "exist") {
-                console.log(alertMsg);
                 const notyf = new Notyf();
                 notyf.error({
-                    message: 'The email address you provided already exists in our records',
-                    duration: 9000,
+                    message: 'This email address is already exists',
+                    duration: 6000,
+                })
+            } else if (alertMsg == "error to sign up") {
+                const notyf = new Notyf();
+                notyf.error({
+                    message: 'Something had happened wrong',
+                    duration: 6000,
                 })
             }
         })
