@@ -8,10 +8,10 @@ let submitForm = document.querySelector(".submitForm")
 function showPassword(element, inputField) {
     if (inputField.type === "password") {
         inputField.type = "text";
-        element.src = "../assests/image/hide.svg";
+        element.src = "../assets/image/hide.svg";
     } else {
         inputField.type = "password";
-        element.src = "../assests/image/show.svg";
+        element.src = "../assets/image/show.svg";
     }
 }
 

@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog - errehub</title>
-    <link rel="shortcut icon" href="../assests/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../assests/styles/style.css">
-    <link rel="stylesheet" href="../assests/styles/blog.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/blog.css">
 </head>
 
 <body>
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="../index.html"><img src="../assests/errehub-wight.webp" alt="errehub logo"></a>
+                <a href="../index.html"><img src="../assets/image/errehub-wight.webp" alt="errehub logo"></a>
             </div>
             <nav>
                 <ul>
@@ -23,25 +23,25 @@
                         <div id="drop">
                             <ul>
                                 <li>
-                                    <img src="../assests/resume.png" alt="errehub resume image">
+                                    <img src="../assets/resume.png" alt="errehub resume image">
                                     <a href="">build resume</a>
                                 </li>
                                 <li>
-                                    <img src="../assests/letter.png" alt="coverletter image">
+                                    <img src="../assets/letter.png" alt="coverletter image">
                                     <a href="">cover letter</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="">templates</a></li>
+                    <li><a href="../template/template.html">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="content.php">blog</a></li>
                     <li><a href="">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
-                <a class="regBtn login" href="../log-in/login.html">log in</a>
-                <a class="regBtn sign" href="../sign-up/sign-in.html">sign in</a>
+                <a class="regBtn login" href="../login/login.php">log in</a>
+                <a class="regBtn sign" href="../signup/sign-up.php">sign in</a>
             </div>
         </div>
     </header>
@@ -49,7 +49,7 @@
         <div class="topics">
             <div class="topic topic1">
                 <div class="topicImg">
-                    <img src="img/resume.jpg" alt="image topic">
+                    <img src="../assets/image/img/resume.jpg" alt="image topic">
                 </div>
                 <div class="topicContent">
                     <div class="topicTitle">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="topicFooter">
                             <div class="readBlog">
-                                <a href="topic.php?id=1&title=Crafting-an-Impressive-Resume&image=img/resume.jpg">Know more</a>
+                                <a href="topic.php?id=1&title=Crafting-an-Impressive-Resume">Know more</a>
                             </div>
                             <div class="topicDate">
                                 <section class="publishBy"><strong>errehub</strong></section>
@@ -81,7 +81,7 @@
             </div>
             <div class="topic topic2">
                 <div class="topicImg">
-                    <img src="img/exemple.jpg" alt="image topic">
+                    <img src="../assets/image/img/resume.jpg" alt="image topic">
                 </div>
                 <div class="topicContent">
                     <div class="topicTitle">
@@ -112,7 +112,7 @@
             </div>
             <div class="topic topic3">
                 <div class="topicImg">
-                    <img src="img/exemple.jpg" alt="image topic">
+                    <img src="../assets/image/img/resume.jpg" alt="image topic">
                 </div>
                 <div class="topicContent">
                     <div class="topicTitle">
@@ -157,7 +157,7 @@
         </div>
         <div class="mainFooter">
             <div class="footCol about">
-                <a href="../index.html"><img src="../assests/errehub-dark.webp" alt="logo of the website Errehub"></a>
+                <a href="../index.html"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
                 <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume.
                     Our
                     user-friendly CV builder is designed for simplicity, helping you showcase your unique skills

@@ -31,7 +31,7 @@
 
 .template::before {
     content: "";
-    background-image: url("../assests/blobleft.svg");
+    background-image: url("../assets/blobleft.svg");
     bottom: 5%;
     left: 5%;
     transform: translate(-55%, 50%);
@@ -43,7 +43,7 @@
 
 .template::after {
     content: "";
-    background-image: url("../assests/blobright.svg");
+    background-image: url("../assets/blobright.svg");
     right: 5%;
     top: 5%;
     transform: translate(50%, -40%);

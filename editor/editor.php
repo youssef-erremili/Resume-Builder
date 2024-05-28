@@ -14,9 +14,9 @@ if (!isset($_SESSION["loggedin"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor App</title>
-    <link rel="stylesheet" href="../assests/styles/editor.css">
-    <link rel="stylesheet" href="../assests/styles/style.css">
-    <link rel="shortcut icon" href="../assests/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/editor.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -66,7 +66,7 @@ if (!isset($_SESSION["loggedin"])) {
                         <div style="width: inherit; height: inherit; display: flex;">
                             <div class="column colthin" style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
                                 <div class="image" style="width: 100%; text-align: center;">
-                                    <!-- ../assests/image/profile-user.jpg -->
+                                    <!-- ../assets/image/profile-user.jpg -->
                                     <img src="" alt="profile user" id="profile" style="width: 7rem; height: 8rem; object-fit: fill; border-radius: 6px;">
                                 </div>
                                 <div style="margin: -0.4rem 0 0 0.5rem;">
@@ -452,7 +452,7 @@ if (!isset($_SESSION["loggedin"])) {
         //     });
         // })
     </script>
-    <script src="../assests/js/editor.js"></script>
+    <script src="../assets/js/editor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../config/config.php");
-// include($_SERVER["DOCUMENT_ROOT"]."/resume-builder/assests/php/signup.php"); 
+// include($_SERVER["DOCUMENT_ROOT"]."/resume-builder/assets/php/signup.php"); 
 
 $alertMsg = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in - Errehub</title>
-    <link rel="stylesheet" href="../assests/styles/register.css">
-    <link rel="shortcut icon" href="../assests/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/register.css">
+    <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
 
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="left">
             <div class="logo">
                 <a href="../index.html">
-                    <img src="../assests/image/errehub-dark-font.webp" alt="errehub website logo">
+                    <img src="../assets/image/errehub-dark-font.webp" alt="errehub website logo">
                 </a>
             </div>
             <div class="head">
@@ -79,12 +79,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="third sectionYU">
                         <input type="password" name="password" id="Password1" spellcheck="false" class="inputField" autocomplete="off" placeholder="Password">
-                        <img src="../assests/image/show.svg" alt="show-password" class="password" id="passIcon">
+                        <img src="../assets/image/show.svg" alt="show-password" class="password" id="passIcon">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </div>
                     <div class="forth sectionYU">
                         <input type="password" name="passWord-confirm" id="Password2" spellcheck="false" class="inputField" autocomplete="off" placeholder="Conform Password">
-                        <img src="../assests/image/show.svg" alt="show-password" class="password" id="passIcon">
+                        <img src="../assets/image/show.svg" alt="show-password" class="password" id="passIcon">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </div>
                     <input type="submit" id="submit" name="signup" value="Sign up">
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         })
     </script>
-    <script src="../assests/js/sign-in.js"></script>
+    <script src="../assets/js/sign-in.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 </body>
