@@ -154,16 +154,19 @@ main .navbar nav ul {
     background-color: var(--main-title-c);
 }
 
+main .navbar nav ul li span button,
 main .navbar nav ul li a,
 main .navbar nav ul li span {
     display: flex;
     align-items: center;
 }
 
-main .navbar nav ul li span a:nth-child(1){
+main .navbar nav ul li:nth-child(1) span a,
+main .navbar nav ul li span button:nth-child(1) {
     margin-right: 0.5rem;
 }
 
+main .navbar nav ul li span button,
 main .navbar nav ul li a {
     color: var(--input-color);
     font-size: 1.09rem;
@@ -172,12 +175,15 @@ main .navbar nav ul li a {
     border: 1px solid #52525A;
     border-radius: 0.3rem;
     font-weight: 300;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 main .navbar nav ul li a ion-icon {
     font-size: 1.2rem;
 }
 
+main .navbar nav ul li span button:nth-child(1) ion-icon,
 main .navbar nav ul li:nth-child(1) a ion-icon,
 main .navbar nav ul li:nth-child(3) a ion-icon {
     margin-right: 0.4rem;

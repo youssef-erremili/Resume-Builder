@@ -25,11 +25,16 @@ if (!isset($_SESSION["loggedin"])) {
         <div class="navbar">
             <nav>
                 <ul>
-                    <li><a href=""><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a></li>
+                    <li>
+                        <span>
+                            <a href=""><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a>
+                            <a href="../logout/logout.php"><ion-icon name="log-out-outline"></ion-icon>log out</a>
+                        </span>
+                    </li>
                     <li><a href="">saved changes <ion-icon name="cloud-done-outline"></ion-icon></a></li>
                     <li>
                         <span>
-                            <a href=""><ion-icon name="print-outline"></ion-icon> print</a>
+                            <button id="printBtn"><ion-icon name="print-outline"></ion-icon> print</button>
                             <a href=""><ion-icon name="arrow-down-outline"></ion-icon> download</a>
                         </span>
                     </li>
@@ -38,8 +43,8 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
         <div class="fill_container">
             <div class="fill-col left">
-                <main style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
-                    <div class="templateContainer" style="background-color: #f8f8f8; width: inherit; height: inherit; padding: 2rem 1.5rem;">
+                <main id="resume-container" style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none;">
+                    <div class="templateContainer" style="width: 795px; height: 1122px; padding: 2rem 1.5rem;">
                         <header style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
                             <div class="names">
                                 <h1 style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
