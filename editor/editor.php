@@ -66,8 +66,7 @@ if (!isset($_SESSION["loggedin"])) {
                         <div style="width: inherit; height: inherit; display: flex;">
                             <div class="column colthin" style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
                                 <div class="image" style="width: 100%; text-align: center;">
-                                    <!-- ../assets/image/profile-user.jpg -->
-                                    <img src="" alt="profile user" id="profile" style="width: 7rem; height: 8rem; object-fit: fill; border-radius: 6px;">
+                                    <img src="../assets/image/user.png" id="profile" style="width: 7rem; height: 8rem; object-fit: fill; border-radius: 6px;">
                                 </div>
                                 <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">

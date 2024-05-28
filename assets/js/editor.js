@@ -289,3 +289,9 @@ profileInput.addEventListener("change", () => {
     reader.readAsDataURL(profileInput.files[0]);
 })
 
+
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+});
+
+
