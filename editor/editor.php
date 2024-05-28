@@ -66,7 +66,8 @@ if (!isset($_SESSION["loggedin"])) {
                         <div style="width: inherit; height: inherit; display: flex;">
                             <div class="column colthin" style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
                                 <div class="image" style="width: 100%; text-align: center;">
-                                    <img src="../assests/image/profile-user.jpg" alt="profile user" style="width: 50%; height: 50%; border-radius: 6px;">
+                                    <!-- ../assests/image/profile-user.jpg -->
+                                    <img src="" alt="profile user" id="profile" style="width: 7rem; height: 8rem; object-fit: fill; border-radius: 6px;">
                                 </div>
                                 <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
@@ -120,7 +121,7 @@ if (!isset($_SESSION["loggedin"])) {
                                         <div>
                                             <label for="user-profile">picture</label>
                                             <div class="yt75">
-                                                <input type="file" name="picture" id="user-profile">
+                                                <input type="file" accept="image/png, image/jpeg, image/jpg" name="picture" id="user-profile">
                                             </div>
                                         </div>
                                         <div class="t54hdy">
