@@ -74,7 +74,7 @@ if (isset($_GET["id"])) {
             <div class="getBtn">
                 <?php if (isset($_SESSION["User-Name"])) : ?>
                     <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
-                    <a class="regBtn" id="logout" href="logout/logout.php">
+                    <a class="regBtn" id="logout" href="../logout/logout.php">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </a>
                 <?php else : ?>
