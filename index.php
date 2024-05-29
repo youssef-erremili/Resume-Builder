@@ -19,7 +19,7 @@ include("config/config.php");
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="index.html"><img src="assets/image/errehub-wight.webp" alt="errehub logo"></a>
+                <a href="index.php"><img src="assets/image/errehub-wight.webp" alt="errehub logo"></a>
             </div>
             <nav>
                 <ul>
@@ -40,7 +40,7 @@ include("config/config.php");
                     <li><a href="template/template.html">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="blog/content.php">blog</a></li>
-                    <li><a href="">about</a></li>
+                    <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
