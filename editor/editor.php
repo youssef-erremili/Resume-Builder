@@ -27,7 +27,7 @@ if (!isset($_SESSION["loggedin"])) {
                 <ul>
                     <li>
                         <span>
-                            <a href=""><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a>
+                            <a href="../index.php?user=<?php echo $_SESSION["User-Name"] ?>"><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a>
                             <a href="../logout/logout.php"><ion-icon name="log-out-outline"></ion-icon>log out</a>
                         </span>
                     </li>
