@@ -149,7 +149,7 @@ header .nav nav ul li ion-icon {
 
 .mainContainer {
     background-color: var(--weight);
-    background-image: url(assests/wave-main.svg);
+    background-image: url(assets/wave-main.svg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;

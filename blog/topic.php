@@ -7,14 +7,14 @@
     <title>title here</title>
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../assests/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="../index.html"><img src="../assests/errehub-wight.webp" alt="errehub logo"></a>
+                <a href="../index.html"><img src="../assets/errehub-wight.webp" alt="errehub logo"></a>
             </div>
             <nav>
                 <ul>
@@ -113,7 +113,7 @@
         </div>
         <div class="mainFooter">
             <div class="footCol about">
-                <a href="../index.html"><img src="../assests/errehub-dark.webp" alt="logo of the website Errehub"></a>
+                <a href="../index.html"><img src="../assets/errehub-dark.webp" alt="logo of the website Errehub"></a>
                 <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume.
                     Our
                     user-friendly CV builder is designed for simplicity, helping you showcase your unique skills

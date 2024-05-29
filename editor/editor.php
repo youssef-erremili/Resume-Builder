@@ -14,9 +14,9 @@ if (!isset($_SESSION["loggedin"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor App</title>
-    <link rel="stylesheet" href="../assests/styles/editor.css">
-    <link rel="stylesheet" href="../assests/styles/style.css">
-    <link rel="shortcut icon" href="../assests/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/editor.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -25,11 +25,16 @@ if (!isset($_SESSION["loggedin"])) {
         <div class="navbar">
             <nav>
                 <ul>
-                    <li><a href=""><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a></li>
+                    <li>
+                        <span>
+                            <a href=""><ion-icon name="arrow-back-outline"></ion-icon> <?php echo $_SESSION["User-Name"] ?></a>
+                            <a href="../logout/logout.php"><ion-icon name="log-out-outline"></ion-icon>log out</a>
+                        </span>
+                    </li>
                     <li><a href="">saved changes <ion-icon name="cloud-done-outline"></ion-icon></a></li>
                     <li>
                         <span>
-                            <a href=""><ion-icon name="print-outline"></ion-icon> print</a>
+                            <button id="printBtn"><ion-icon name="print-outline"></ion-icon> print</button>
                             <a href=""><ion-icon name="arrow-down-outline"></ion-icon> download</a>
                         </span>
                     </li>
@@ -38,8 +43,8 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
         <div class="fill_container">
             <div class="fill-col left">
-                <main style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none; user-select: none;">
-                    <div class="templateContainer" style="background-color: #f8f8f8; width: inherit; height: inherit; padding: 2rem 1.5rem;">
+                <main id="resume-container" style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none;">
+                    <div class="templateContainer" style="width: 795px; height: 1122px; padding: 2rem 1.5rem;">
                         <header style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
                             <div class="names">
                                 <h1 style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
@@ -61,7 +66,7 @@ if (!isset($_SESSION["loggedin"])) {
                         <div style="width: inherit; height: inherit; display: flex;">
                             <div class="column colthin" style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
                                 <div class="image" style="width: 100%; text-align: center;">
-                                    <img src="../assests/image/profile-user.jpg" alt="profile user" style="width: 50%; height: 50%; border-radius: 6px;">
+                                    <img src="../assets/image/user.png" id="profile" style="width: 7rem; height: 8rem; object-fit: fill; border-radius: 6px;">
                                 </div>
                                 <div style="margin: -0.4rem 0 0 0.5rem;">
                                     <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
@@ -115,7 +120,7 @@ if (!isset($_SESSION["loggedin"])) {
                                         <div>
                                             <label for="user-profile">picture</label>
                                             <div class="yt75">
-                                                <input type="file" name="picture" id="user-profile">
+                                                <input type="file" accept="image/png, image/jpeg, image/jpg" name="picture" id="user-profile">
                                             </div>
                                         </div>
                                         <div class="t54hdy">
@@ -446,7 +451,7 @@ if (!isset($_SESSION["loggedin"])) {
         //     });
         // })
     </script>
-    <script src="../assests/js/editor.js"></script>
+    <script src="../assets/js/editor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
