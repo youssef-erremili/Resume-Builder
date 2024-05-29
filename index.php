@@ -1,8 +1,6 @@
 <?php
 session_start();
 include("config/config.php");
-header("Location: index.php");
-exit();
 
 ?>
 
@@ -46,9 +44,11 @@ exit();
                 </ul>
             </nav>
             <div class="getBtn">
-                <?php if (isset($_SESSION['user_name'])) : ?>
-                    <span class="user-name">Welcome, <?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
-                    <a class="regBtn logout" href="logout.php">Log out</a>
+                <?php if (isset($_SESSION["User-Name"])) : ?>
+                    <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
+                    <a class="regBtn" id="logout" href="logout/logout.php">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </a>
                 <?php else : ?>
                     <a class="regBtn login" href="login/login.php">Log in</a>
                     <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
