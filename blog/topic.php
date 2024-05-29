@@ -1,20 +1,54 @@
+<?php
+session_start();
+include("../config/config.php");
+
+$title = "";
+$topic = "";
+if (isset($_GET["id"])) {
+    $url_value = $_GET["id"];
+    $query = "SELECT title_content FROM blogs WHERE blog_id = $url_value";
+    $stmt = $serverConnection->prepare($query);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $title =  $result['title_content'];
+    } else {
+        echo "No blog found";
+    }
+}
+
+if (isset($_GET["id"])) {
+    $url_value = $_GET["id"];
+    $query = "SELECT blog_content FROM blogs WHERE blog_id = $url_value";
+    $stmt = $serverConnection->prepare($query);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $topic =  $result['blog_content'];
+    } else {
+        echo "No blog found";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title here</title>
-    <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title><?php echo $title ?></title>
+    <link rel="stylesheet" href="../assets/styles/blog.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/errehub-wight.webp" alt="errehub logo"></a>
+                <a href="../index.php"><img src="../assets/image/errehub-wight.webp" alt="errehub logo"></a>
             </div>
             <nav>
                 <ul>
@@ -23,7 +57,7 @@
                         <div id="drop">
                             <ul>
                                 <li>
-                                    <a href="">build resume</a>
+                                    <a href="../editor/editor.php">build resume</a>
                                 </li>
                                 <li>
                                     <a href="">cover letter</a>
@@ -32,21 +66,28 @@
                         </div>
                     </li>
                     <li><a href="../template/template.html">templates</a></li>
-                    <li><a onclick="scrollToSection('features')">features</a></li>
+                    <li><a href="">features</a></li>
                     <li><a href="../blog/content.php">blog</a></li>
                     <li><a href="">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
-                <a class="regBtn login" href="../log-in/login.html">log in</a>
-                <a class="regBtn sign" href="../sign-up/sign-in.html">sign in</a>
+                <?php if (isset($_SESSION["User-Name"])) : ?>
+                    <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
+                    <a class="regBtn" id="logout" href="logout/logout.php">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </a>
+                <?php else : ?>
+                    <a class="regBtn login" href="login/login.php">Log in</a>
+                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                <?php endif; ?>
             </div>
         </div>
     </header>
     <div class="header">
         <div class="head">
             <div class="headImg">
-                <img src class="imageOfProduct" alt="image">
+                <img src="" class="imgtopic" alt="image topic">
             </div>
         </div>
         <div class="m43reR">
@@ -56,44 +97,20 @@
             </div>
             <div class="middleTopic">
                 <div class="topicTitle">
-                    <?php
-                    $url_value = $_GET["id"];
-                    include("../config/config.php");
-                    $data_fetch = "SELECT title_content FROM blogs WHERE id = $url_value";
-                    $container = mysqli_query($conToserver, $data_fetch);
-                    if ($container->num_rows > 0) {
-                        while ($row = $container->fetch_assoc()) {
-                            echo "<h2>" . $row['title_content'] . "</h2>";
-                        }
-                    } else {
-                        echo "No title found.";
-                    }
-                    ?>
+                    <h2><?php echo $title ?></h2>
                     <div class="dateShare">
                         <p><strong>errehub</strong></p>
                         <p>2024 Jun-24</p>
                     </div>
                 </div>
-                <?php
-                // include("../config/config.php");
-                $url_value = $_GET["id"];
-                $fetch_data = "SELECT blog_content FROM blogs WHERE id = $url_value";
-                $result = mysqli_query($conToserver, $fetch_data);
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo $row["blog_content"];
-                    }
-                } else {
-                    echo "No content found.";
-                }
-                ?>
+                <?php echo $topic ?>
             </div>
             <div class="sideRight">
                 <div class="boxAd">
                     <h3>Build your resume in 5 minutes</h3>
                     <p>Use resume templates that follow the specific rules employers want</p>
                     <section>
-                        <button>Build your resume</button>
+                        <a href="../template/template.html">Build your resume</a>
                     </section>
                 </div>
             </div>
@@ -106,18 +123,18 @@
             </div>
             <div class="footRight">
                 <div class="footBtn">
-                    <a class="getStarted footBtn" href="">build your resume</a>
+                    <a class="getStarted footBtn" href="../template/template.html">build your resume</a>
                     <a class="leMore footBtn" href="">how it works</a>
                 </div>
             </div>
         </div>
         <div class="mainFooter">
             <div class="footCol about">
-                <a href="../index.html"><img src="../assets/errehub-dark.webp" alt="logo of the website Errehub"></a>
-                <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume.
-                    Our
-                    user-friendly CV builder is designed for simplicity, helping you showcase your unique skills
-                    effortlessly. Join us and create your standout resume at our website.</p>
+                <a href="../index.php"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
+                <p>At <a class="footInd" href="../index.php">errehub</a>, we make it easy to build a standout resume.
+                    Our user-friendly CV builder is designed for simplicity, helping you showcase your unique skills
+                    effortlessly. Join us and create your standout resume at our website.
+                </p>
             </div>
             <div class="footCol services">
                 <h3>services</h3>
@@ -149,12 +166,9 @@
             <div class="footCol follow">
                 <h3>follow us</h3>
                 <ul>
-                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon
-                    name="logo-github"></ion-icon></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon
-                    name="logo-linkedin"></ion-icon></a>
-                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon
-                    name="logo-instagram"></ion-icon></a>
+                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon name="logo-github"></ion-icon></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon name="logo-instagram"></ion-icon></a>
                 </ul>
             </div>
         </div>
@@ -167,12 +181,18 @@
             </button>
         </div>
     </footer>
-    <script src="../main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script>
-        let dataLink = new URLSearchParams(window.location.search)
-        let imageIndex = dataLink.get("image")
-        document.querySelector(".imageOfProduct").setAttribute("src", imageIndex)
+        let imgtopic = document.getElementsByClassName("imgtopic")[0];
+        let dataLink = new URLSearchParams(window.location.search);
+        let imageIndex = dataLink.get("image");
+
+        // Check if imageIndex is not null and imgtopic exists
+        if (imageIndex !== null && imgtopic) {
+            imgtopic.src = imageIndex;
+        }
+        // document.querySelector(".imageOfProduct").setAttribute("src", imageIndex)
     </script>
 </body>
 

@@ -1,20 +1,25 @@
+<?php
+session_start();
+include("../config/config.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog - errehub</title>
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>blog - Errehub</title>
+    <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/styles/blog.css">
 </head>
-
 <body>
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/image/errehub-wight.webp" alt="errehub logo"></a>
+                <a href="../index.php"><img src="../assets/image/errehub-wight.webp" alt="errehub logo"></a>
             </div>
             <nav>
                 <ul>
@@ -23,11 +28,9 @@
                         <div id="drop">
                             <ul>
                                 <li>
-                                    <img src="../assets/resume.png" alt="errehub resume image">
-                                    <a href="">build resume</a>
+                                    <a href="editor/editor.php">build resume</a>
                                 </li>
                                 <li>
-                                    <img src="../assets/letter.png" alt="coverletter image">
                                     <a href="">cover letter</a>
                                 </li>
                             </ul>
@@ -35,21 +38,60 @@
                     </li>
                     <li><a href="../template/template.html">templates</a></li>
                     <li><a href="">features</a></li>
-                    <li><a href="content.php">blog</a></li>
+                    <li><a href="../blog/content.php">blog</a></li>
                     <li><a href="">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
-                <a class="regBtn login" href="../login/login.php">log in</a>
-                <a class="regBtn sign" href="../signup/sign-up.php">sign in</a>
+                <?php if (isset($_SESSION["User-Name"])) : ?>
+                    <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
+                    <a class="regBtn" id="logout" href="logout/logout.php">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </a>
+                <?php else : ?>
+                    <a class="regBtn login" href="login/login.php">Log in</a>
+                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                <?php endif; ?>
             </div>
         </div>
     </header>
     <main class="blog">
         <div class="topics">
+            <div class="topic topic0">
+                <div class="topicImg">
+                    <img src="../assets/image/about-us.jpg" alt="image topic">
+                </div>
+                <div class="topicContent">
+                    <div class="topicTitle">
+                        <section class="admin">
+                            <h4>editor's choice</h4>
+                        </section>
+                        <h2 class="title">about us and who we are</h2>
+                        <div class="topicDescr">
+                            <p>In the competitive job market, your resume is your first introduction to potential
+                                employers. Crafting a compelling and well-structured resume is crucial for making a
+                                lasting impression. This comprehensive guide will walk you through the essential steps
+                                to create a standout resume that effectively showcases your skills, experiences, and
+                                qualifications. </p>
+                        </div>
+                        <div class="topicFooter">
+                            <div class="readBlog">
+                                <a href="topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">Know more</a>
+                            </div>
+                            <div class="topicDate">
+                                <section class="publishBy"><strong>Errehub</strong></section>
+                                <section class="date">
+                                    <p>Jun 14-2024</p>
+                                    <p>2 min read </p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="topic topic1">
                 <div class="topicImg">
-                    <img src="../assets/image/img/resume.jpg" alt="image topic">
+                    <img src="../assets/image/resume.jpg" alt="image topic">
                 </div>
                 <div class="topicContent">
                     <div class="topicTitle">
@@ -66,72 +108,10 @@
                         </div>
                         <div class="topicFooter">
                             <div class="readBlog">
-                                <a href="topic.php?id=1&title=Crafting-an-Impressive-Resume">Know more</a>
+                                <a href="topic.php?id=1&title=crafting-resume&image=../assets/image/resume.jpg">Know more</a>
                             </div>
                             <div class="topicDate">
-                                <section class="publishBy"><strong>errehub</strong></section>
-                                <section class="date">
-                                    <p>Jun 14-2024</p>
-                                    <p>2 min read </p>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="topic topic2">
-                <div class="topicImg">
-                    <img src="../assets/image/img/resume.jpg" alt="image topic">
-                </div>
-                <div class="topicContent">
-                    <div class="topicTitle">
-                        <section class="admin">
-                            <h4>editor's choice</h4>
-                        </section>
-                        <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing</h2>
-                        <div class="topicDescr">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis adipisci iure tempore
-                                sequi animi eos vero error? Magni impedit sed velit odit ea eveniet iste sunt qui magnam
-                                debitis, quas dolorem ipsum ullam, mollitia aliquid ratione possimus fugiat.
-                                Praesentium, libero!</p>
-                        </div>
-                        <div class="topicFooter">
-                            <div class="readBlog">
-                                <a href="">Know more</a>
-                            </div>
-                            <div class="topicDate">
-                                <section class="publishBy"><strong>errehub</strong></section>
-                                <section class="date">
-                                    <p>Jun 14-2024</p>
-                                    <p>2 min read </p>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="topic topic3">
-                <div class="topicImg">
-                    <img src="../assets/image/img/resume.jpg" alt="image topic">
-                </div>
-                <div class="topicContent">
-                    <div class="topicTitle">
-                        <section class="admin">
-                            <h4>editor's choice</h4>
-                        </section>
-                        <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing</h2>
-                        <div class="topicDescr">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis adipisci iure tempore
-                                sequi animi eos vero error? Magni impedit sed velit odit ea eveniet iste sunt qui magnam
-                                debitis, quas dolorem ipsum ullam, mollitia aliquid ratione possimus fugiat.
-                                Praesentium, libero!</p>
-                        </div>
-                        <div class="topicFooter">
-                            <div class="readBlog">
-                                <a href="">Know more</a>
-                            </div>
-                            <div class="topicDate">
-                                <section class="publishBy"><strong>errehub</strong></section>
+                                <section class="publishBy"><strong>Errehub</strong></section>
                                 <section class="date">
                                     <p>Jun 14-2024</p>
                                     <p>2 min read </p>
