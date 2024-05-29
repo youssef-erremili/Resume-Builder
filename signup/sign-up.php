@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["signup"])) {
         $fullname =   trim(htmlspecialchars($_POST["FullName"]));
         $email_address = trim(htmlspecialchars($_POST["EmailAddress"]));
-        $user_password = trim(trim(htmlspecialchars(password_hash($user_password, PASSWORD_DEFAULT))));
+        $user_password = trim(htmlspecialchars(password_hash($_POST["password"], PASSWORD_DEFAULT)));
         $firstQuery = "SELECT * FROM users WHERE email_address = :email_address";
         $stmt = $serverConnection->prepare($firstQuery);
         $stmt->bindParam(":email_address", $email_address, PDO::PARAM_STR);
