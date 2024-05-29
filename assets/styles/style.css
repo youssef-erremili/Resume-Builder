@@ -226,7 +226,25 @@ main .mainHeader .left .btnSetion a,
     color: var(--weight);
     border-radius: 5px;
     cursor: pointer;
+}
 
+.getBtn .regBtn{
+    position: relative;
+}
+
+#logout{
+    background-color: transparent;
+}
+
+#logout ion-icon{
+    color: var(--main-title-c);
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .getBtn .regBtn {
