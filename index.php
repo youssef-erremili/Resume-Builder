@@ -1,5 +1,14 @@
+<?php
+session_start();
+include("config/config.php");
+header("Location: index.php");
+exit();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +16,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="nav">
@@ -36,8 +46,13 @@
                 </ul>
             </nav>
             <div class="getBtn">
-                <a class="regBtn login" href="login/login.php">log in</a>
-                <a class="regBtn sign" href="signup/sign-up.php">sign in</a>
+                <?php if (isset($_SESSION['user_name'])) : ?>
+                    <span class="user-name">Welcome, <?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
+                    <a class="regBtn logout" href="logout.php">Log out</a>
+                <?php else : ?>
+                    <a class="regBtn login" href="login/login.php">Log in</a>
+                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                <?php endif; ?>
             </div>
         </div>
     </header>
@@ -48,7 +63,7 @@
                     <div class="textContent">
                         <h1>Create standout resumes with Errehub</h1>
                         <p>Use professional field-tested resume templates that follow the exact 'resume
-                        rules' employers look for. Easy to use and done within minutes - try now for free!</p>
+                            rules' employers look for. Easy to use and done within minutes - try now for free!</p>
                     </div>
                     <div class="btnSetion">
                         <a href="editor/editor.php">build your resume</a>
@@ -199,12 +214,9 @@
             <div class="footCol follow">
                 <h3>follow us</h3>
                 <ul>
-                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon
-                    name="logo-github"></ion-icon></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon
-                    name="logo-linkedin"></ion-icon></a>
-                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon
-                    name="logo-instagram"></ion-icon></a>
+                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon name="logo-github"></ion-icon></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon name="logo-instagram"></ion-icon></a>
                 </ul>
             </div>
         </div>
@@ -221,8 +233,9 @@
 
 
 
-    
+
     <script src="assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>
