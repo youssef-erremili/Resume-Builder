@@ -157,11 +157,11 @@ header .nav nav ul li ion-icon {
 }
 
 main .mainHeader {
-    width: 100%;
-    min-height: 125vh;
+    width: 95%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 main .mainHeader .left,
@@ -180,7 +180,7 @@ main .mainHeader .left .textContent h1 {
 }
 
 main .mainHeader .left .textContent p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 14px 0;
     font-weight: 300;
     text-wrap: balance;
@@ -216,17 +216,16 @@ main .mainHeader .left .btnSetion {
     margin: 12px 0;
 }
 
-main .mainHeader .left .btnSetion button,
+main .mainHeader .left .btnSetion a,
 .getBtn .regBtn {
-    padding: 10px 20px;
+    padding: 0.4rem 1.2rem;
     font-size: 1.2rem;
+    font-weight: 400;
     text-transform: capitalize;
     background-color: var(--first-main-color);
     color: var(--weight);
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
-    vertical-align: middle;
 
 }
 
@@ -310,15 +309,17 @@ main .mainHeader .left .card {
     width: 50%;
 }
 
-.column .col .contText .btncol {
-    padding: 10px 20px;
-    border-radius: 6px;
+.column .col .contText a {
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.3rem;
     font-size: 1.2rem;
     font-weight: 400;
-    margin: 15px 0;
+    margin: 0.9rem  0;
     background-color: var(--first-main-color);
     color: var(--weight);
     cursor: pointer;
+    font-weight: 400;
+    display: inline-block;
 }
 
 .createResume {
