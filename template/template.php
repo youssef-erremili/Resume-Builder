@@ -1,3 +1,14 @@
+<?php
+session_start();
+include("../config/config.php");
+
+$query = "SELECT * FROM templates";
+$stmt = $serverConnection->prepare($query);
+$stmt->execute();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,15 +38,22 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="template.html">templates</a></li>
+                    <li><a href="template.php?user-id=<?php echo $_SESSION["User-Name"] ?>">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="../blog/topic.php">blog</a></li>
                     <li><a href="">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
-                <a class="regBtn login" href="../log-in/login.html">log in</a>
-                <a class="regBtn sign" href="../sign-up/sign-in.html">sign in</a>
+                <?php if (isset($_SESSION["User-Name"])) : ?>
+                    <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
+                    <a class="regBtn" id="logout" href="logout/logout.php">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </a>
+                <?php else : ?>
+                    <a class="regBtn login" href="login/login.php">Log in</a>
+                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                <?php endif; ?>
             </div>
         </div>
     </header>
@@ -47,78 +65,20 @@
                 you and the job you want.</p>
         </div>
         <div class="galleryTemplates">
+        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>            
             <div class="templateCol templateCol1">
                 <section>
-                    <img src="../assets/image/resume image.jpg" alt="resume image">
+                    <img src="<?php echo $row["resume_image"]; ?>" alt="Resume Image">
                 </section>
                 <section>
-                    <a href="../editor/editor.html?resume-id=5379&img=true">use this template</a>
+                    <a href="../editor/editor.php?resume-id=<?php echo $row["resume_id"]; ?>&img=true">use this template</a>
                 </section>
                 <section>
-                    <h3>london</h3>
-                    <p>Striking modern header, professional two column template structure.</p>
+                    <h3><?php echo $row["resume_name"]; ?></h3>
+                    <p><?php echo $row["resume_description"]; ?></p>
                 </section>
             </div>
-            <div class="templateCol templateCol2">
-                <section>
-                    <img src="../assets/image/resume image.jpg" alt="resume image">
-                </section>
-                <section>
-                    <a href="../editor/editor.html?resume-id=5379">use this template</a>
-                </section>
-                <section>
-                    <h3>london</h3>
-                    <p>Striking modern header, professional two column template structure.</p>
-                </section>
-            </div>
-            <div class="templateCol templateCol3">
-                <section>
-                    <img src="../assets/image/resume image.jpg" alt="resume image">
-                </section>
-                <section>
-                    <a href="../editor/editor.html?resume-id=5379">use this template</a>
-                </section>
-                <section>
-                    <h3>london</h3>
-                    <p>Striking modern header, professional two column template structure.</p>
-                </section>
-            </div>
-            <div class="templateCol templateCol4">
-                <section>
-                    <img src="../assets/image/resume image.jpg" alt="resume image">
-                </section>
-                <section>
-                    <a href="../editor/editor.html?resume-id=5379">use this template</a>
-                </section>
-                <section>
-                    <h3>london</h3>
-                    <p>Striking modern header, professional two column template structure.</p>
-                </section>
-            </div>
-            <div class="templateCol templateCol5">
-                <section>
-                    <img src="../assets/image/resume image.jpg" alt="resume image">
-                </section>
-                <section>
-                    <a href="../editor/editor.html?resume-id=5379">use this template</a>
-                </section>
-                <section>
-                    <h3>london</h3>
-                    <p>Striking modern header, professional two column template structure.</p>
-                </section>
-            </div>
-            <div class="templateCol templateCol6">
-                <section>
-                    <img src="../assets/image/resume image.jpg" alt="resume image">
-                </section>
-                <section>
-                    <a href="../editor/editor.html?resume-id=5379">use this template</a>
-                </section>
-                <section>
-                    <h3>london</h3>
-                    <p>Striking modern header, professional two column template structure.</p>
-                </section>
-            </div>
+            <?php }; ?>
         </div>
     </main>
     <footer>
@@ -135,8 +95,7 @@
         </div>
         <div class="mainFooter">
             <div class="footCol about">
-                <a href="../index.html"><img src="../assets/image/errehub-dark.webp"
-                        alt="logo of the website Errehub"></a>
+                <a href="../index.html"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
                 <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume.
                     Our
                     user-friendly CV builder is designed for simplicity, helping you showcase your unique skills
@@ -172,12 +131,9 @@
             <div class="footCol follow">
                 <h3>follow us</h3>
                 <ul>
-                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon
-                            name="logo-github"></ion-icon></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon
-                            name="logo-linkedin"></ion-icon></a>
-                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon
-                            name="logo-instagram"></ion-icon></a>
+                    <a target="_blank" href="https://github.com/Youssef19er"><ion-icon name="logo-github"></ion-icon></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/youssef-erremili-100070296/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a target="_blank" href="https://www.instagram.com/youssef.erremili.990/"><ion-icon name="logo-instagram"></ion-icon></a>
                 </ul>
             </div>
         </div>
