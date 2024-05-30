@@ -275,8 +275,9 @@ printButton.addEventListener("click", () => {
     let printContent = document.getElementById("resume-container").innerHTML;
     let originalContent = document.body.innerHTML;
     document.body.innerHTML = printContent;
-    window.print();
-    document.body.innerHTML = originalContent
+    print();
+    document.body.innerHTML = originalContent;
+    window.location.reload()
 })
 
 profileInput.addEventListener("change", () => {
