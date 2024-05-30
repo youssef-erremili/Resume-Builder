@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedin"])) {
 <body>
     <main>
         <div class="navbar">
-            <nav>
+            <nav> <img src="../assets/image/about-us.jpg" alt="">
                 <ul>
                     <li>
                         <span>
@@ -43,68 +43,7 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
         <div class="fill_container">
             <div class="fill-col left">
-                <main id="resume-container" style="overflow: hidden;;font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none;">
-                    <div class="templateContainer" style="width: 785px; overflow: hidden; height: 1090px; padding: 0.8rem 1.5rem;">
-                        <header style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
-                            <div class="names">
-                                <h1 style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
-                                    <strong id="first-name-cv"></strong>
-                                </h1>
-                                <h1 id="last-name-cv" style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
-                                </h1>
-                                <span id="headline-cv" class="headline" style="font-weight: 400; font-size: 1.2rem; color: #9f9f9f; text-transform: uppercase;"></span>
-                            </div>
-                            <div class="socials" style="margin-top: 0.4rem;">
-                                <ul>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-map-pin-2-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="address-location-cv"></span></li>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-smartphone-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="phone-cv"></span></li>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-mail-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="email-cv"></span></li>
-                                    <li style="margin: 0.2rem 0; font-size: 0.99rem;"><i class="ri-calendar-line" style="display: inline-block; background-color: #eee305; padding: 4px; border-radius: 6px; margin-right: 0.4rem;"></i><span id="date-birth-cv"></span></li>
-                                </ul>
-                            </div>
-                        </header>
-                        <div style="width: inherit; height: inherit; display: flex;">
-                            <div class="column colthin" style="height: inherit; width: 40%; border-right: 2px solid #d6d8d6;">
-                                <div class="image" style="width: 100%; text-align: center;">
-                                    <img src="../assets/image/user.png" id="profile" style="width: 7rem; height: 8rem; object-fit: fill; border-radius: 6px;">
-                                </div>
-                                <div style="margin: -0.4rem 0 0 0.5rem;">
-                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        education</h2>
-                                    <div id="col_education" style="text-transform: capitalize;"></div>
-                                </div>
-                                <div style="margin: -0.4rem 0 0 0.5rem;">
-                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        skills</h2>
-                                    <div id="col_skills"></div>
-                                </div>
-                                <div style="margin: -0.4rem 0 0 0.5rem;">
-                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        languages</h2>
-                                    <div id="col_language"></div>
-                                </div>
-                                <div style="margin: -0.4rem 0 0 0.5rem;">
-                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        hoppies</h2>
-                                    <div id="col_hoppy"></div>
-                                </div>
-                            </div>
-                            <div class="column colbold" style="height: inherit; width: 60%; padding: 0 2rem;">
-                                <div class="about-user" style="border-bottom: 2px solid #eaeaea; padding-bottom: 2rem;">
-                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        about me</h2>
-                                    <p id="about-me-cv" style="font-size: 1.01rem; font-weight: 400; color: #8d8d8d; margin: 0.3rem 0;">
-                                    </p>
-                                </div>
-                                <div class="experience-user">
-                                    <h2 style="font-size: 2rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem 0;">
-                                        experience</h2>
-                                    <div id="col_experience" style="margin: 1.5rem 0;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+                <!-- here will show you the resume template -->
             </div>
             <div class="fill-col right">
                 <div class="header_titles">
