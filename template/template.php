@@ -25,7 +25,7 @@ $stmt->execute();
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/image/errehub-wight.webp" alt="errehub logo"></a>
+                <a href="../index.php"><img src="../assets/image/errehub-wight.webp" alt="errehub logo"></a>
             </div>
             <nav>
                 <ul>
@@ -33,12 +33,12 @@ $stmt->execute();
                         <ion-icon id="rotate" name="chevron-down-outline"></ion-icon>
                         <div id="drop">
                             <ul>
-                                <li><a href="">build resume</a></li>
+                                <li><a href="../editor/editor.php?user-id=<?php echo $_SESSION["User-Name"] ?>">build resume</a></li>
                                 <li><a href="">cover letter</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="template.php?user-id=<?php echo $_SESSION["User-Name"] ?>">templates</a></li>
+                    <li><a href="template.php">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="../blog/topic.php">blog</a></li>
                     <li><a href="">about</a></li>
