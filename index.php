@@ -37,7 +37,7 @@ include("config/config.php");
                             </ul>
                         </div>
                     </li>
-                    <li><a href="template/template.html">templates</a></li>
+                    <li><a href="template/template.php">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="blog/content.php">blog</a></li>
                     <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
