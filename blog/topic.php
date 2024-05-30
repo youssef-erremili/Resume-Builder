@@ -65,7 +65,7 @@ if (isset($_GET["id"])) {
                             </ul>
                         </div>
                     </li>
-                    <li><a href="../template/template.html">templates</a></li>
+                    <li><a href="../template/template.php">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="../blog/content.php">blog</a></li>
                     <li><a href="">about</a></li>
