@@ -43,8 +43,8 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
         <div class="fill_container">
             <div class="fill-col left">
-                <main id="resume-container" style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none;">
-                    <div class="templateContainer" style="width: 795px; height: 1122px; padding: 2rem 1.5rem;">
+                <main id="resume-container" style="overflow: hidden;;font-family: 'Poppins', sans-serif; list-style-type: none; text-decoration: none;">
+                    <div class="templateContainer" style="width: 785px; overflow: hidden; height: 1090px; padding: 0.8rem 1.5rem;">
                         <header style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 4rem; padding-block: inherit;">
                             <div class="names">
                                 <h1 style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; font-weight: 500;">
