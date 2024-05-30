@@ -65,19 +65,19 @@ $stmt->execute();
                 you and the job you want.</p>
         </div>
         <div class="galleryTemplates">
-        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>            
-            <div class="templateCol templateCol1">
-                <section>
-                    <img src="<?php echo $row["resume_image"]; ?>" alt="Resume Image">
-                </section>
-                <section>
-                    <a href="../editor/editor.php?resume-id=<?php echo $row["resume_id"]; ?>&img=true">use this template</a>
-                </section>
-                <section>
-                    <h3><?php echo $row["resume_name"]; ?></h3>
-                    <p><?php echo $row["resume_description"]; ?></p>
-                </section>
-            </div>
+            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                <div class="templateCol templateCol1">
+                    <section>
+                        <img src="<?php echo $row["resume_image"]; ?>" alt="Resume Image">
+                    </section>
+                    <section>
+                        <a href="../editor/editor.php?resume-id=<?php echo $row["resume_id"]; ?>&img=true">use this template</a>
+                    </section>
+                    <section>
+                        <h3><?php echo $row["resume_name"]; ?></h3>
+                        <p><?php echo $row["resume_description"]; ?></p>
+                    </section>
+                </div>
             <?php }; ?>
         </div>
     </main>
