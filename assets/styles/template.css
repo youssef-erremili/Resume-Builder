@@ -87,24 +87,27 @@
 
 .template .galleryTemplates .templateCol {
     background-color: var(--box-color);
-    height: 38rem;
+    /* height: 38rem; */
     position: relative;
     border-radius: 0.5rem;
+    width: 30%;
+    overflow: hidden;
 }
 
 .template .galleryTemplates .templateCol section:nth-child(1) {
-    width: inherit;
     height: inherit;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     padding-top: 2.5rem;
     justify-content: center;
     height: fit-content;
 }
 
 .template .galleryTemplates .templateCol section img {
-    width: 80%;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
 }
 
 .template .galleryTemplates .templateCol section a {
