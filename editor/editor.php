@@ -6,6 +6,20 @@ if (!isset($_SESSION["loggedin"])) {
     exit;
 }
 
+$resume_template = "";
+
+if (isset($_GET["resume-id"])) {
+    $resume_id = $_GET["resume-id"];
+    $query = "SELECT resume_template FROM templates WHERE resume_id = $resume_id";
+    $stmt = $serverConnection->prepare($query);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $resume_template = $row["resume_template"];
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +37,7 @@ if (!isset($_SESSION["loggedin"])) {
 <body>
     <main>
         <div class="navbar">
-            <nav> <img src="../assets/image/about-us.jpg" alt="">
+            <nav>
                 <ul>
                     <li>
                         <span>
@@ -44,6 +58,7 @@ if (!isset($_SESSION["loggedin"])) {
         <div class="fill_container">
             <div class="fill-col left">
                 <!-- here will show you the resume template -->
+                <?php echo $resume_template ?>
             </div>
             <div class="fill-col right">
                 <div class="header_titles">
