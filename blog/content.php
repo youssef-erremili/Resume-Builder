@@ -39,18 +39,18 @@ include("../config/config.php");
                     <li><a href="../template/template.php">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="../blog/content.php">blog</a></li>
-                    <li><a href="">about</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
                 <?php if (isset($_SESSION["User-Name"])) : ?>
                     <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
-                    <a class="regBtn" id="logout" href="logout/logout.php">
+                    <a class="regBtn" id="logout" href="../logout/logout.php">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </a>
                 <?php else : ?>
-                    <a class="regBtn login" href="login/login.php">Log in</a>
-                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                    <a class="regBtn login" href="../login/login.php">Log in</a>
+                    <a class="regBtn sign" href="../signup/sign-up.php">Sign in</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -66,7 +66,7 @@ include("../config/config.php");
                         <section class="admin">
                             <h4>editor's choice</h4>
                         </section>
-                        <h2 class="title">about us and who we are</h2>
+                        <h2 class="title">About us and who we are</h2>
                         <div class="topicDescr">
                             <p>In the competitive job market, your resume is your first introduction to potential
                                 employers. Crafting a compelling and well-structured resume is crucial for making a
