@@ -40,19 +40,19 @@ $stmt->execute();
                     </li>
                     <li><a href="template.php">templates</a></li>
                     <li><a href="">features</a></li>
-                    <li><a href="../blog/topic.php">blog</a></li>
-                    <li><a href="">about</a></li>
+                    <li><a href="../blog/content.php">blog</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
                 <?php if (isset($_SESSION["User-Name"])) : ?>
                     <span class="regBtn"><?php echo htmlspecialchars($_SESSION["User-Name"]); ?></span>
-                    <a class="regBtn" id="logout" href="logout/logout.php">
+                    <a class="regBtn" id="logout" href="../logout/logout.php">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </a>
                 <?php else : ?>
-                    <a class="regBtn login" href="login/login.php">Log in</a>
-                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                    <a class="regBtn login" href="../login/login.php">Log in</a>
+                    <a class="regBtn sign" href="../signup/sign-up.php">Sign in</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -96,8 +96,7 @@ $stmt->execute();
         <div class="mainFooter">
             <div class="footCol about">
                 <a href="../index.html"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
-                <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume.
-                    Our
+                <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume. Our
                     user-friendly CV builder is designed for simplicity, helping you showcase your unique skills
                     effortlessly. Join us and create your standout resume at our website.</p>
             </div>
