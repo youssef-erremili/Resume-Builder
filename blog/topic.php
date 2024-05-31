@@ -68,7 +68,7 @@ if (isset($_GET["id"])) {
                     <li><a href="../template/template.php">templates</a></li>
                     <li><a href="">features</a></li>
                     <li><a href="../blog/content.php">blog</a></li>
-                    <li><a href="">about</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
@@ -78,8 +78,8 @@ if (isset($_GET["id"])) {
                         <ion-icon name="log-out-outline"></ion-icon>
                     </a>
                 <?php else : ?>
-                    <a class="regBtn login" href="login/login.php">Log in</a>
-                    <a class="regBtn sign" href="signup/sign-up.php">Sign in</a>
+                    <a class="regBtn login" href="../login/login.php">Log in</a>
+                    <a class="regBtn sign" href="../signup/sign-up.php">Sign in</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -123,7 +123,7 @@ if (isset($_GET["id"])) {
             </div>
             <div class="footRight">
                 <div class="footBtn">
-                    <a class="getStarted footBtn" href="../template/template.html">build your resume</a>
+                    <a class="getStarted footBtn" href="../editor/editor.php">build your resume</a>
                     <a class="leMore footBtn" href="">how it works</a>
                 </div>
             </div>
@@ -187,12 +187,9 @@ if (isset($_GET["id"])) {
         let imgtopic = document.getElementsByClassName("imgtopic")[0];
         let dataLink = new URLSearchParams(window.location.search);
         let imageIndex = dataLink.get("image");
-
-        // Check if imageIndex is not null and imgtopic exists
         if (imageIndex !== null && imgtopic) {
             imgtopic.src = imageIndex;
         }
-        // document.querySelector(".imageOfProduct").setAttribute("src", imageIndex)
     </script>
 </body>
 
