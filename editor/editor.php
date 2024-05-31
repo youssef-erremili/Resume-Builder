@@ -18,7 +18,7 @@ if (isset($_GET["resume-id"])) {
         $resume_template = $row["resume_template"];
     }
 }
-
+$serverConnection = null;
 
 ?>
 <!DOCTYPE html>
@@ -49,16 +49,15 @@ if (isset($_GET["resume-id"])) {
                     <li>
                         <span>
                             <button id="printBtn"><ion-icon name="print-outline"></ion-icon> print</button>
-                            <a href=""><ion-icon name="arrow-down-outline"></ion-icon> download</a>
+                            <button id="download-pdf"><ion-icon name="arrow-down-outline"></ion-icon> download</button>
                         </span>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="fill_container">
-            <div class="fill-col left">
-                <!-- here will show you the resume template -->
-                <?php echo $resume_template ?>
+            <div class="fill-col left" id="template-html">
+                <?php echo $resume_template; ?>
             </div>
             <div class="fill-col right">
                 <div class="header_titles">
@@ -396,19 +395,19 @@ if (isset($_GET["resume-id"])) {
             </div>
         </div>
     </main>
+
     <script>
-        // document.addEventListener('DOMContentLoaded', (event) => {
-        //     const notyf = new Notyf()
-        //     notyf.success({
-        //         message: 'Password is uncorrect',
-        //         duration: 6000,
-        //     });
-        // })
+        let userName = "<?php echo $_SESSION["User-Name"] ?>";
+        
     </script>
+
+
     <script src="../assets/js/editor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
-
 </html>
