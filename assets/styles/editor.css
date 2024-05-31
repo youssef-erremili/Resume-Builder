@@ -183,6 +183,7 @@ main .navbar nav ul li a ion-icon {
     font-size: 1.2rem;
 }
 
+main .navbar nav ul li span button:nth-child(2) ion-icon,
 main .navbar nav ul li span button:nth-child(1) ion-icon,
 main .navbar nav ul li:nth-child(1) a ion-icon,
 main .navbar nav ul li:nth-child(3) a ion-icon {
