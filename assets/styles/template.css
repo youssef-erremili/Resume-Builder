@@ -78,20 +78,19 @@
 }
 
 .template .galleryTemplates {
-    max-width: 90vw;
+    width: 90vw;
     margin: 4rem auto 1.2rem auto;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .template .galleryTemplates .templateCol {
     background-color: var(--box-color);
-    /* height: 38rem; */
     position: relative;
     border-radius: 0.5rem;
-    width: 30%;
     overflow: hidden;
+    width: 30%;
 }
 
 .template .galleryTemplates .templateCol section:nth-child(1) {
