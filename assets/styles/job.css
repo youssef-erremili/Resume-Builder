@@ -13,38 +13,43 @@
 h1 {
     text-align: center;
     color: var(--main-title-c);
-    margin-top: 4.6rem;
-    font-size: 1.6rem;
+    margin-top: 6.6rem;
+    font-size: 1.9rem;
 }
 
 .subtitle {
     text-align: center;
+    text-transform: lowercase;
     color: var(--slogan-color);
-    margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    text-wrap: balance;
+    display: inline-block;
+    margin: 0.7rem 0 3rem 0;
 }
 
 #jobsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    gap: 4rem 2.2rem;
     margin: 2.2rem auto;
-    max-width: 95%;
+    max-width: 98%;
     padding: 20px;
 }
 
 .job {
-    background-color: #fff;
-    border: 1px solid #e1e4e8;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 32%;
-    padding: 20px;
-    transition: box-shadow 0.3s ease;
+    background-color: var(--weight);
+    border: 1px solid #edeef0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px -5px #0000001a;
+    width: 30%;
+    padding: 1.5rem 1.2rem;
+    transition: box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: relative;
 }
 
 .job:hover {
@@ -52,41 +57,66 @@ h1 {
 }
 
 .job h2 {
-    font-size: 1.5em;
-    margin: 0 0 10px;
+    font-size: 1.3rem;
     color: var(--second-main-color);
+    margin-bottom: 0.02rem;
+    font-weight: 500;
 }
 
-.job p {
-    margin: 5px 0;
-    color: #555;
+.job .info {
+    margin: 0.4rem 0.4rem;
 }
 
-.job .company {
-    font-weight: bold;
-    color: #333;
+.job .info div strong {
+    text-transform: capitalize;
+    color: var(--main-title-c);
+    font-size: 0.9rem;
 }
 
-.job .location,
-.job .salary {
-    color: #555;
+.job .info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job .info div p {
+    text-align: right;
+    color: var(--slogan-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+
 }
 
 .job .description {
-    margin: 10px 0;
+    color: var(--slogan-color);
+    margin: 0.3rem 0;
+    font-size: 1.04rem;
+    text-transform: lowercase;
+}
+
+#category {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(-5%, -50%);
+    color: var(--main-title-c);
+    background-color: var(--footer-title-c);
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .job a {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 10px;
+    display: block;
+    padding: 0.5rem 1.2rem;
     color: #fff;
-    background-color: #28a745;
-    text-decoration: none;
-    font-weight: bold;
+    background-color: var(--second-main-color);
+    font-weight: 600;
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease;
+    width: fit-content;
+    margin: 0.5rem 0;
 }
 
 .job a:hover {
