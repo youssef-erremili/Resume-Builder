@@ -28,8 +28,8 @@ function displayJobs(jobs) {
             <h2>${job.title}</h2>
             <p class="company">${job.company.display_name}</p>
             <p class="location">${job.location.display_name}</p>
-            <p class="salary">${job.salary_min ? job.salary_min + ' - ' + job.salary_max : 'Salary not provided'}</p>
-            <p class="description">${job.description.substring(0, 200)}...</p>
+            <p class="salary">${job.salary_max ? job.salary_max : 'Salary not provided'} US</p>
+            <p class="description">${job.description.substring(0, 150)}</p>
             <a href="${job.redirect_url}" target="_blank">Apply Now</a>
         `;
 
