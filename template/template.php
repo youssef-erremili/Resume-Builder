@@ -31,12 +31,12 @@ $stmt->execute();
                         <ion-icon id="rotate" name="chevron-down-outline"></ion-icon>
                         <div id="drop">
                             <ul>
-                                <li><a href="../editor/editor.php?user-id=<?php echo $_SESSION["User-Name"] ?>">build resume</a></li>
+                                <li><a href="../editor/editor.php">build resume</a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="template.php">templates</a></li>
-                    <li><a href="../job/listing.php">job</a></li>
+                    <li><a href="../job/job.php">jobs</a></li>
                     <li><a href="../blog/blog.php">blog</a></li>
                     <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
@@ -98,7 +98,7 @@ $stmt->execute();
                 <h3>services</h3>
                 <ul>
                     <li><a href="../editor/editor.php"><ion-icon name="chevron-forward-outline"></ion-icon> Resume builder</a></li>
-                    <li><a href="../job/listing.php"><ion-icon name="chevron-forward-outline"></ion-icon> Job</a></li>
+                    <li><a href="../job/job.php"><ion-icon name="chevron-forward-outline"></ion-icon> Job</a></li>
                     <li><a href="../template/template.php"><ion-icon name="chevron-forward-outline"></ion-icon> Templates</a></li>
                     <li><a href="../blog/blog.php"><ion-icon name="chevron-forward-outline"></ion-icon> Blog</a></li>
                 </ul>
