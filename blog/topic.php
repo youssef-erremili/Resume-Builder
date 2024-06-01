@@ -124,7 +124,6 @@ if (isset($_GET["id"])) {
             <div class="footRight">
                 <div class="footBtn">
                     <a class="getStarted footBtn" href="../editor/editor.php">build your resume</a>
-                    <a class="leMore footBtn" href="">how it works</a>
                 </div>
             </div>
         </div>

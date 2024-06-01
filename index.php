@@ -175,7 +175,6 @@ include("config/config.php");
             <div class="footRight">
                 <div class="footBtn">
                     <a class="getStarted footBtn" href="">build your resume</a>
-                    <a class="leMore footBtn" href="">how it works</a>
                 </div>
             </div>
         </div>

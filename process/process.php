@@ -1,5 +1,6 @@
 <?php
-include("../")
+include("../config/config.php")
+
 
 
 

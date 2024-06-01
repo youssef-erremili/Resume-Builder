@@ -15,6 +15,7 @@ include("../config/config.php");
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/styles/blog.css">
 </head>
+
 <body>
     <header>
         <div class="nav">
@@ -131,7 +132,6 @@ include("../config/config.php");
             <div class="footRight">
                 <div class="footBtn">
                     <a class="getStarted footBtn" href="">build your resume</a>
-                    <a class="leMore footBtn" href="">how it works</a>
                 </div>
             </div>
         </div>

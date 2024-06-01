@@ -429,50 +429,29 @@ main .mainHeader .left .card {
 footer .footHead {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 2rem;
-    width: fit-content;
-    margin: 4rem auto 5rem auto;
-    border-radius: 10px;
-    width: 90%;
-}
-
-footer .footHead .footLeft {
-    width: 68%;
+    justify-content: center;
+    padding: 1.4rem 2.5rem;
+    margin: 6rem auto 0rem auto;
+    width: 100%;
+    background-color: var(--footer-title-c);
 }
 
 footer .footHead .footLeft h2 {
     font-weight: 400;
-    color: var(--slogan-color);
+    color: var(--main-title-c);
     text-wrap: balance;
+    font-size: 1.4rem;
+    width: 60%;
 }
 
-footer .footHead .footRight {
-    width: 45%;
-}
-
-.footHead .footRight .footBtn .footBtn {
+.footHead .footRight a.getStarted {
     font-size: 1.2rem;
     text-transform: capitalize;
-    border-radius: 5px;
-    text-decoration: none;
-    padding: 10px 20px;
-    text-wrap: nowrap;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.7rem;
     display: inline-block;
-    margin-top: 5px;
-}
-
-.footRight .footBtn a.getStarted {
-    background-color: var(--first-main-color);
-    border: 3px solid var(--first-main-color);
     color: var(--weight);
-    margin-right: 10px;
-
-}
-
-.footRight .footBtn a.leMore {
-    color: var(--second-main-color);
-    border: 2.6px solid var(--second-main-color);
+    background-color: var(--first-main-color);
 }
 
 footer .mainFooter {
