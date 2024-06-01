@@ -76,7 +76,7 @@ let save_hobby = document.getElementById("hobbyForm")
 let hobby_name = document.getElementById("hobby")
 // end here
 
-levels = ["basic", "novice", "intermediate", "advanced", "expert"]
+let levels = ["basic", "novice", "intermediate", "advanced", "expert"]
 let lengthChart = document.querySelectorAll(".length")
 let template = ""
 let dateMonth = document.querySelectorAll(".dateMonth")
