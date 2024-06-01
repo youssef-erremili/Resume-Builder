@@ -70,7 +70,7 @@ include("../config/config.php");
                                 employers. Crafting a compelling and well-structured resume is crucial for making a
                                 lasting impression. This comprehensive guide will walk you through the essential steps
                                 to create a standout resume that effectively showcases your skills, experiences, and
-                                qualifications. </p>
+                                qualifications.</p>
                         </div>
                         <div class="topicFooter">
                             <div class="readBlog">
