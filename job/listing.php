@@ -55,7 +55,7 @@ session_start();
             </div>
         </div>
     </header>
-    <h1>Discover Job Opportunities with Our New Job Listing API in Resume Builder</h1>
+    <h1>Discover Job Opportunities with Our New <br> Job Listing API in Resume Builder</h1>
     <p class="subtitle">Introducing our latest feature in Resume Builder: the Job Listing API! Search and apply for jobs directly from your resume builder with real-time listings and tailored recommendations. Start 
     building your resume and find your dream job today!</p>
     <div id="loader" class="loader"></div>
