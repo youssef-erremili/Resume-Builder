@@ -59,9 +59,6 @@ if (isset($_GET["id"])) {
                                 <li>
                                     <a href="../editor/editor.php">build resume</a>
                                 </li>
-                                <li>
-                                    <a href="">cover letter</a>
-                                </li>
                             </ul>
                         </div>
                     </li>
