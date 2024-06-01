@@ -65,7 +65,7 @@ if (isset($_GET["id"])) {
                     <li><a href="../template/template.php">templates</a></li>
                     <li><a href="../job/job.php">jobs</a></li>
                     <li><a href="blog.php">blog</a></li>
-                    <li><a href="topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
+                    <li id="selected"><a class="selected" href="topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">

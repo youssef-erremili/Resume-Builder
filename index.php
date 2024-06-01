@@ -21,9 +21,9 @@ include("config/config.php");
             </div>
             <nav>
                 <ul>
-                    <li class="parent">
+                    <li class="parent" id="selected">
                         services
-                        <ion-icon id="rotate" name="chevron-down-outline"></ion-icon>
+                        <ion-icon id="rotate" class="selectedIcon" name="chevron-down-outline"></ion-icon>
                         <div id="drop">
                             <ul>
                                 <li>

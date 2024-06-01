@@ -5,6 +5,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@ session_start();
                         </div>
                     </li>
                     <li><a href="../template/template.php">templates</a></li>
-                    <li><a href="job.php">jobs</a></li>
+                    <li id="selected"><a class="selected" href="job.php">jobs</a></li>
                     <li><a href="../blog/blog.php">blog</a></li>
                     <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
@@ -53,8 +54,8 @@ session_start();
         </div>
     </header>
     <h1>Discover Job Opportunities with Our New <br> Job Listing API in Resume Builder</h1>
-    <p class="subtitle">Introducing our latest feature in Resume Builder: the Job Listing API! Search and apply for jobs directly from your resume builder with real-time listings and tailored recommendations. Start 
-    building your resume and find your dream job today!</p>
+    <p class="subtitle">Introducing our latest feature in Resume Builder: the Job Listing API! Search and apply for jobs directly from your resume builder with real-time listings and tailored recommendations. Start
+        building your resume and find your dream job today!</p>
     <div id="loader" class="loader"></div>
     <div id="jobsContainer" class="hidden"></div>
     <footer>
@@ -123,4 +124,5 @@ session_start();
     <script src="../assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>

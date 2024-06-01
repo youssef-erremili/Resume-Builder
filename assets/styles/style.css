@@ -41,17 +41,10 @@ input {
     box-sizing: border-box;
     outline: none;
     border: none;
-}
-
-a {
     text-decoration: none;
-    font-size: 20;
-}
-
-ul,
-li,
-ol {
     list-style-type: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 html,
@@ -65,7 +58,7 @@ header .nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 15vh;
+    min-height: 16vh;
     box-shadow: 0px -16px 66px 9px #0000001a;
     position: relative;
 }
@@ -73,20 +66,16 @@ header .nav {
 header .nav nav ul li {
     display: inline-block;
     margin: 10px 12px;
+    padding: 0.3rem 0.6rem;
 }
 
 header .nav nav ul li a,
 header .nav nav ul li {
-    font-size: 1.3rem;
-    color: var(--black);
+    font-size: 1.2rem;
+    color: var(--main-title-c);
     text-transform: capitalize;
     cursor: pointer;
     user-select: none;
-}
-
-ul li:checked {
-    background-color: #09ff00;
-    color: #1a91f0;
 }
 
 header .nav nav ul li ion-icon {
@@ -104,7 +93,9 @@ header .nav nav ul li ion-icon {
 #drop {
     position: absolute;
     display: none;
-    transform: translate(0rem, 1rem);
+    top: 4.3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: var(--weight);
     box-shadow: 0px 8px 50px 8px rgba(0, 0, 0, 0.1);
 }
@@ -115,10 +106,6 @@ header .nav nav ul li ion-icon {
     padding: 6px 1px 6px 5px;
     width: 10rem;
     transition: all ease-in-out 0.3s;
-}
-
-#drop li:last-child {
-    margin: 5px 0 0 0;
 }
 
 #drop li a {
@@ -146,6 +133,18 @@ header .nav nav ul li ion-icon {
     transform: rotate(180deg);
 }
 
+#selected {
+    background-color: var(--first-main-color);
+    border-radius: 0.2rem;
+    color: var(--weight);
+}
+.selected {
+    color: var(--weight) !important;
+}
+
+.selectedIcon{
+    color: var(--weight) !important; 
+}
 
 .mainContainer {
     background-color: var(--weight);
@@ -228,15 +227,15 @@ main .mainHeader .left .btnSetion a,
     cursor: pointer;
 }
 
-.getBtn .regBtn{
+.getBtn .regBtn {
     position: relative;
 }
 
-#logout{
+#logout {
     background-color: transparent;
 }
 
-#logout ion-icon{
+#logout ion-icon {
     color: var(--main-title-c);
     display: inline-block;
     font-size: 1.6rem;
@@ -332,7 +331,7 @@ main .mainHeader .left .card {
     border-radius: 0.3rem;
     font-size: 1.2rem;
     font-weight: 400;
-    margin: 0.9rem  0;
+    margin: 0.9rem 0;
     background-color: var(--first-main-color);
     color: var(--weight);
     cursor: pointer;

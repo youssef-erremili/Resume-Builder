@@ -35,7 +35,7 @@ $stmt->execute();
                             </ul>
                         </div>
                     </li>
-                    <li><a href="template.php">templates</a></li>
+                    <li id="selected"><a class="selected" href="template.php">templates</a></li>
                     <li><a href="../job/job.php">jobs</a></li>
                     <li><a href="../blog/blog.php">blog</a></li>
                     <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
