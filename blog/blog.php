@@ -29,17 +29,14 @@ include("../config/config.php");
                         <div id="drop">
                             <ul>
                                 <li>
-                                    <a href="editor/editor.php">build resume</a>
-                                </li>
-                                <li>
-                                    <a href="">cover letter</a>
+                                    <a href="../editor/editor.php">build resume</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="../template/template.php">templates</a></li>
-                    <li><a href="">features</a></li>
-                    <li><a href="../blog/content.php">blog</a></li>
+                    <li><a href="../job/job.php">jobs</a></li>
+                    <li><a href="../blog/blog.php">blog</a></li>
                     <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
             </nav>
@@ -131,25 +128,22 @@ include("../config/config.php");
             </div>
             <div class="footRight">
                 <div class="footBtn">
-                    <a class="getStarted footBtn" href="">build your resume</a>
+                    <a class="getStarted footBtn" href="../editor/editor.php">build your resume</a>
                 </div>
             </div>
         </div>
         <div class="mainFooter">
             <div class="footCol about">
-                <a href="../index.html"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
-                <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume.
-                    Our
-                    user-friendly CV builder is designed for simplicity, helping you showcase your unique skills
-                    effortlessly. Join us and create your standout resume at our website.</p>
+                <a href="../index.php"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
+                <p>At <a class="footInd" href="../index.php">errehub</a>, we make it easy to build a standout resume. Our user-friendly CV builder is designed for simplicity, helping you showcase your unique skills effortlessly. Join us and create your standout resume at our website.</p>
             </div>
             <div class="footCol services">
                 <h3>services</h3>
                 <ul>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Cv builder</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Cover letter</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Templates</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Features</a></li>
+                    <li><a href="../editor/editor.php"><ion-icon name="chevron-forward-outline"></ion-icon> Resume builder</a></li>
+                    <li><a href="../job/job.php"><ion-icon name="chevron-forward-outline"></ion-icon> Job</a></li>
+                    <li><a href="../template/template.php"><ion-icon name="chevron-forward-outline"></ion-icon> Templates</a></li>
+                    <li><a href="blog.php"><ion-icon name="chevron-forward-outline"></ion-icon> Blog</a></li>
                 </ul>
             </div>
             <div class="footCol link">
@@ -158,8 +152,7 @@ include("../config/config.php");
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Privacy policy</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Terms and conditions</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> How to use</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> FAQ</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
                 </ul>
             </div>
             <div class="footCol address">
@@ -188,7 +181,12 @@ include("../config/config.php");
             </button>
         </div>
     </footer>
-    <script src="../main.js"></script>
+
+
+
+
+
+    <script src="../assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
