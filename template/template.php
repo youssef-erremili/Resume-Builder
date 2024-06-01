@@ -88,14 +88,14 @@ $stmt->execute();
             </div>
             <div class="footRight">
                 <div class="footBtn">
-                    <a class="getStarted footBtn" href="">build your resume</a>
+                    <a class="getStarted footBtn" href="../editor/editor.php">build your resume</a>
                 </div>
             </div>
         </div>
         <div class="mainFooter">
             <div class="footCol about">
-                <a href="../index.html"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
-                <p>At <a class="footInd" href="../index.html">errehub</a>, we make it easy to build a standout resume. Our
+                <a href="../index.php"><img src="../assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
+                <p>At <a class="footInd" href="../index.php">errehub</a>, we make it easy to build a standout resume. Our
                     user-friendly CV builder is designed for simplicity, helping you showcase your unique skills
                     effortlessly. Join us and create your standout resume at our website.</p>
             </div>

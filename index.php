@@ -38,7 +38,7 @@ include("config/config.php");
                         </div>
                     </li>
                     <li><a href="template/template.php">templates</a></li>
-                    <li><a href="">features</a></li>
+                    <li><a href="job/listing.php">jobs</a></li>
                     <li><a href="blog/content.php">blog</a></li>
                     <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
                 </ul>
@@ -162,8 +162,6 @@ include("config/config.php");
                         </div>
                     </div>
                 </div>
-                <div class="formResult formResult2"></div>
-                <div class="formResult formResult3"></div>
             </div>
         </div>
     </main>
