@@ -6,8 +6,9 @@ if (!isset($_SESSION["loggedin"])) {
     exit;
 }
 
-$resume_template = "";
 
+$resume_template = "";
+$alertMsg = "";
 if (isset($_GET["resume-id"])) {
     $resume_id = $_GET["resume-id"];
     $query = "SELECT resume_template FROM templates WHERE resume_id = $resume_id";
@@ -17,7 +18,11 @@ if (isset($_GET["resume-id"])) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $resume_template = $row["resume_template"];
     }
+} else {
+    $alertMsg = "none";
 }
+
+
 $serverConnection = null;
 
 ?>
@@ -45,7 +50,7 @@ $serverConnection = null;
                             <a href="../logout/logout.php"><ion-icon name="log-out-outline"></ion-icon>log out</a>
                         </span>
                     </li>
-                    <li><a href="">saved changes <ion-icon name="cloud-done-outline"></ion-icon></a></li>
+                    <li><a href="" class="saved">saved changes <ion-icon class="saved" name="cloud-done-outline"></ion-icon></a></li>
                     <li>
                         <span>
                             <button id="printBtn"><ion-icon name="print-outline"></ion-icon> print</button>
@@ -125,7 +130,7 @@ $serverConnection = null;
                                 <form action="" method="" id="profileForm">
                                     <div style="position: relative;">
                                         <label for="aboutme">Description</label>
-                                        <span class="lengthConatiner"><span class="length">4</span>/300</span>
+                                        <span class="lengthConatiner"><span class="length">4</span>/150</span>
                                         <textarea cols="30" rows="7" name="aboutme" id="aboutme" class="about-ytc7">I am</textarea>
                                         <div class="text-editor">
                                             <ul>
@@ -200,7 +205,7 @@ $serverConnection = null;
                                     <div class="box box3">
                                         <div style="position: relative;">
                                             <label for="education">Description</label>
-                                            <span class="lengthConatiner"><span class="length">9</span>/300</span>
+                                            <span class="lengthConatiner"><span class="length">9</span>/150</span>
                                             <textarea cols="30" rows="7" name="education" id="education-description" class="edu-ytc7">I studied</textarea>
                                             <div class="text-editor">
                                                 <ul>
@@ -279,7 +284,7 @@ $serverConnection = null;
                                     <div class="box box3">
                                         <div style="position: relative;">
                                             <label for="education">Description</label>
-                                            <span class="lengthConatiner"><span class="length">9</span>/300</span>
+                                            <span class="lengthConatiner"><span class="length">9</span>/150</span>
                                             <textarea cols="30" rows="7" name="education" id="education-description-E" class="edu-ytc7">I Word at</textarea>
                                             <div class="text-editor">
                                                 <ul>
@@ -396,17 +401,31 @@ $serverConnection = null;
         </div>
     </main>
 
+
     <script>
-        let userName = "<?php echo $_SESSION["User-Name"] ?>";
-        
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const notyf = new Notyf();
+            const userName = "<?php echo addslashes($_SESSION['User-Name']); ?>";
+            const alertMsg = "<?php echo addslashes($alertMsg); ?>";
+            notyf.success({
+                message: `Welcome Mr. ${userName}`,
+                duration: 6000,
+            });
+
+            if (alertMsg === "none") {
+                notyf.error({
+                    message: 'Please select a resume first. Thanks!',
+                    duration: 12000,
+                });
+            }
+        });
     </script>
-
-
     <script src="../assets/js/editor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </body>
 </html>

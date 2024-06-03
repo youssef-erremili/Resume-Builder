@@ -151,7 +151,6 @@ include("../config/config.php");
                 <ul>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Privacy policy</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Terms and conditions</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> How to use</a></li>
                     <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
                 </ul>
             </div>

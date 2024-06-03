@@ -146,12 +146,18 @@ main .form_input {
     color: var(--main-title-c);
 }
 
+main .navbar{
+    padding: 1.2rem 2rem;
+    background-color: var(--main-title-c);
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
 main .navbar nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2rem 2rem;
-    background-color: var(--main-title-c);
 }
 
 main .navbar nav ul li span button,
@@ -467,4 +473,19 @@ main .navbar nav ul li:nth-child(2) a ion-icon {
 .employment-ed764 .text-editor ul span li input[type="color"]::-webkit-color-swatch,
 .profile-yr6t .text-editor ul span li input[type="color"]::-webkit-color-swatch {
     border: none;
+}
+
+
+.load {
+    animation: rotate360 1s linear infinite;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

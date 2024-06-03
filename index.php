@@ -6,6 +6,7 @@ include("config/config.php");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@ include("config/config.php");
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="nav">
@@ -56,15 +58,20 @@ include("config/config.php");
             <div class="mainHeader">
                 <div class="left">
                     <div class="textContent">
-                        <h1>Create standout resumes with Errehub</h1>
+                        <h1>Create standout <br> resumes <br> with Errehub</h1>
                         <p>Use professional field-tested resume templates that follow the exact 'resume
                             rules' employers look for. Easy to use and done within minutes - try now for free!</p>
                     </div>
                     <div class="btnSetion">
-                        <a href="editor/editor.php">build your resume</a>
+                        <a href="editor/editor.php">Get started</a>
                     </div>
                     <div class="card">
+                        <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
                         <span>No credit card required</span>
+                    </div>
+                    <div class="card">
+                        <span><ion-icon name="rocket-outline"></ion-icon></span>
+                        <span>just use your account</span>
                     </div>
                 </div>
                 <div class="right">
@@ -76,7 +83,7 @@ include("config/config.php");
         </div>
         <div class="features" id="features">
             <div class="headText">
-                <h1>We are not the only ones in the market, but we are the best.</h1>
+                <h1>We are not the only ones in the market, <br> but we are the best.</h1>
                 <p>"In a crowded market, we proudly stand out as the absolute best, setting a standard that goes beyond the ordinary. The online resume creator you need to get hired faster."</p>
             </div>
             <div class="column">
@@ -85,17 +92,17 @@ include("config/config.php");
                         <img src="assets/image/easy.webp" alt="easy to use errehub">
                     </div>
                     <div class="contText">
-                        <h2>Easy to use CV builder</h2>
-                        <p>Craft your career effortlessly with our CV builder Easy to use, professional
-                            results. change CV templates and customize fonts. No download required!"</p>
+                        <h2>Easy to use Resume builder</h2>
+                        <p>Craft your career effortlessly with our Resume builder Easy to use, professional
+                            results. change Resume templates and customize fonts. No download required!"</p>
                         <a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">How it works</a>
                     </div>
                 </div>
                 <div class="col col2">
                     <div class="contText">
                         <h2>Easy Resume Editing After Completion</h2>
-                        <p>Transforming your CV building experience, Our commitment is to empower you with a
-                            hassle-free process,Your professional journey begins with ease and flexibility, making us the ideal choice for your CV-building needs.</p>
+                        <p>Transforming your Resume building experience, Our commitment is to empower you with a
+                            hassle-free process,Your professional journey begins with ease and flexibility, making us the ideal choice for your Resume-building needs.</p>
                         <a href="blog/blog.php">Blogs</a>
                     </div>
                     <div class="contImg">
@@ -108,7 +115,7 @@ include("config/config.php");
                     </div>
                     <div class="contText">
                         <h2>Free Resume template</h2>
-                        <p>Check out our free CV examples, resume examples, and other career resources to
+                        <p>Check out our free Resume examples, resume examples, and other career resources to
                             make the most of your job search. Stuck somewhere? We are here to answer your resume questions.</p>
                         <a href="template/template.php">Choose a template</a>
                     </div>
@@ -130,7 +137,7 @@ include("config/config.php");
                     <div class="content content1 activeContent">
                         <div class="contentLeft">
                             <h3>Register first</h3>
-                            <p>After ensuring our website is the right fit for you, simply pick a template that matches your needs. This is your next step in the journey towards crafting a personalized and professional resume. Move forward effortlessly, tailoring your CV to showcase your unique strengths and skills. Your path to a standout resume is just a template away!
+                            <p>After ensuring our website is the right fit for you, simply pick a template that matches your needs. This is your next step in the journey towards crafting a personalized and professional resume. Move forward effortlessly, tailoring your Resume to showcase your unique strengths and skills. Your path to a standout resume is just a template away!
                             </p>
                         </div>
                         <div class="contentRight">
@@ -149,7 +156,7 @@ include("config/config.php");
                     <div class="content content3">
                         <div class="contentLeft">
                             <h3>hola!, download IT now</h3>
-                            <p>After ensuring our website is the right fit for you, simply pick a template that matches your needs. This is your next step in the journey towards crafting a personalized and professional resume. Move forward effortlessly, tailoring your CV to showcase your unique strengths and skills. Your path to a standout resume is just a template away!
+                            <p>After ensuring our website is the right fit for you, simply pick a template that matches your needs. This is your next step in the journey towards crafting a personalized and professional resume. Move forward effortlessly, tailoring your Resume to showcase your unique strengths and skills. Your path to a standout resume is just a template away!
                             </p>
                         </div>
                         <div class="contentRight">
@@ -174,7 +181,7 @@ include("config/config.php");
         <div class="mainFooter">
             <div class="footCol about">
                 <a href="index.php"><img src="assets/image/errehub-dark.webp" alt="logo of the website Errehub"></a>
-                <p>At <a class="footInd" href="index.php">errehub</a>, we make it easy to build a standout resume. Our user-friendly CV builder is designed for simplicity, helping you showcase your unique skills effortlessly. Join us and create your standout resume at our website.</p>
+                <p>At <a class="footInd" href="index.php">errehub</a>, we make it easy to build a standout resume. Our user-friendly Resume builder is designed for simplicity, helping you showcase your unique skills effortlessly. Join us and create your standout resume at our website.</p>
             </div>
             <div class="footCol services">
                 <h3>services</h3>
@@ -190,7 +197,6 @@ include("config/config.php");
                 <ul>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Privacy policy</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Terms and conditions</a></li>
-                    <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> How to use</a></li>
                     <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
                 </ul>
             </div>
@@ -198,7 +204,7 @@ include("config/config.php");
                 <h3>contact</h3>
                 <ul>
                     <li><a href=""><ion-icon name="location-outline"></ion-icon>kenitra, Morocco</a></li>
-                    <li><a href=""><ion-icon name="mail-outline"></ion-icon>errehub.cvbuilder@gmail.com</a></li>
+                    <li><a href=""><ion-icon name="mail-outline"></ion-icon>errehub.resumebuilder@gmail.com</a></li>
                     <li><a href=""><ion-icon name="call-outline"></ion-icon>+212-682-313-601</a></li>
                 </ul>
             </div>
@@ -222,11 +228,7 @@ include("config/config.php");
     </footer>
 
 
-
-
-
     <script src="assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
-
 </html>

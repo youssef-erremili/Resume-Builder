@@ -5,7 +5,9 @@
 
 :root {
     --second-main-color: #21BF73;
-    --first-main-color: #1a91f0;
+    /* --first-main-color: #1a91f0; */
+    --first-main-color: #3572EF;
+    /* --first-main-color: #002379; */
     --footer-color: #eaeaead1;
     --footer-title-c: #ffeb3b;
     --main-title-c: #041731;
@@ -13,6 +15,7 @@
     --title-color: #202020;
     --weight: #ffffff;
     --black: #000000;
+    --light-blue: #f0f8ff;
 }
 
 ::placeholder {
@@ -59,7 +62,7 @@ header .nav {
     align-items: center;
     justify-content: space-around;
     min-height: 16vh;
-    box-shadow: 0px -16px 66px 9px #0000001a;
+    box-shadow: 0px -16px 22px 9px #0000001a;
     position: relative;
 }
 
@@ -138,12 +141,13 @@ header .nav nav ul li ion-icon {
     border-radius: 0.2rem;
     color: var(--weight);
 }
+
 .selected {
     color: var(--weight) !important;
 }
 
-.selectedIcon{
-    color: var(--weight) !important; 
+.selectedIcon {
+    color: var(--weight) !important;
 }
 
 .mainContainer {
@@ -160,7 +164,9 @@ main .mainHeader {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 3rem auto;
+    background-color: var(--light-blue);
+    border-radius: 0.9rem;
 }
 
 main .mainHeader .left,
@@ -263,8 +269,30 @@ main .mainHeader .left .btnSetion a,
 }
 
 main .mainHeader .left .card {
-    font-size: 1.02rem;
-    color: var(--title-color);
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+main .mainHeader .left .card span:nth-child(1) {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-right: 0.2rem;
+}
+
+main .mainHeader .left .card span:nth-child(1) {
+    color: var(--second-main-color);
+}
+
+main .mainHeader .left .card:nth-child(4) {
+    color: var(--first-main-color);
+}
+
+main .mainHeader .left .card span {
+    font-size: 0.9rem;
+    color: var(--slogan-color);
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .features {
@@ -296,7 +324,6 @@ main .mainHeader .left .card {
 .column {
     width: 70rem;
     margin: 10px auto;
-    font-family: 'Euclid Circular A', sans-serif;
 }
 
 .column .col {
@@ -557,5 +584,5 @@ footer .resirved h3 {
     display: flex;
     cursor: pointer;
     background-color: var(--first-main-color);
-    color: #fff;
+    color: var(--weight);
 }

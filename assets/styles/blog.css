@@ -1,14 +1,3 @@
-:root {
-    --second-main-color: #21BF73;
-    --first-main-color: #1a91f0;
-    --footer-color: #eaeaead1;
-    --footer-title-c: #ffeb3b;
-    --main-title-c: #041731;
-    --slogan-color: #525252;
-    --title-color: #202020;
-    --weight: #ffffff;
-    --black: #000000;
-}
 
 .topics .topic {
     display: flex;

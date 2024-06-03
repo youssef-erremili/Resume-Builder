@@ -114,12 +114,16 @@ for (let c = 0; c < dateYear.length; c++) {
 
 
 
-
-
-
-
-
-
+// This function is about loader when data saved on database
+function saveData() {
+    let saved = document.querySelectorAll(".saved");
+    saved[1].setAttribute("name", "refresh-circle-outline");
+    saved[1].classList.add('load');
+    setTimeout(() => {
+        saved[1].classList.remove('load');
+        saved[1].setAttribute("name", "cloud-done-outline");
+    }, 700); 
+}
 
 
 
@@ -161,6 +165,7 @@ save_personal.addEventListener("input", () => {
     phone_cv.innerText = PhoneNumber.value
     address_location_cv.innerText = location_Address.value
     date_birth_cv.innerText = DateBirth.value
+    saveData()
 })
 // end here
 
@@ -169,6 +174,7 @@ save_personal.addEventListener("input", () => {
 save_profile.addEventListener("input", () => {
     let about_me_cv = document.getElementById("about-me-cv")
     about_me_cv.innerText = about_me.value
+    saveData()
 })
 
 function calcLength(formContainer, lengthContainer, sourceContainer, limit) {
@@ -183,6 +189,7 @@ function calcLength(formContainer, lengthContainer, sourceContainer, limit) {
     function preventTyping(e) {
         e.preventDefault();
     }
+    saveData()
 }
 calcLength(save_profile, lengthChart[0], about_me, 300)
 calcLength(formEducation, lengthChart[1], education_description, 300)
@@ -209,6 +216,7 @@ save_education.addEventListener("click", () => {
         </ul>
     `
     col_education.innerHTML += template;
+    saveData()
     // education_description.value
     // present_check.checked
 })
@@ -232,6 +240,7 @@ save_employment.addEventListener("click", () => {
     </div>
     `
     col_experience.innerHTML += template;
+    saveData()
 })
 // end here
 
@@ -252,6 +261,7 @@ function manageForm(frm, frmS, aa, bb, cc, varnm, skilnm) {
             <li style="margin: 0.2rem 0 0 0.6rem; font-size: 0.94rem; text-transform: uppercase;">${skilnm.value} <span style="color: #252525;">(${cc.value})</span></li>
         </ul>`
         der.innerHTML += template
+        saveData()
     })
 }
 manageForm(save_formskill, skillForm, levels, skill_level, text_level, "col_skills", skill_name)
@@ -268,6 +278,7 @@ save_hobby.addEventListener("click", () => {
     </ul>`
 
     col_hoppy.innerHTML += template
+    saveData()
 })
 // end here
 
@@ -291,6 +302,7 @@ profileInput.addEventListener("change", () => {
         userProfile.src = e.target.result;
     }
     reader.readAsDataURL(profileInput.files[0]);
+    saveData()
 })
 
 
@@ -303,17 +315,16 @@ window.addEventListener('beforeunload', function (e) {
 
 // Function to download PDF after converted 
 downloadPdf.addEventListener('click', function (e) {
-    const element = document.getElementById('template-html'); 
+    const element = document.getElementById('template-html');
     html2canvas(element).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
-        const { jsPDF } = window.jspdf; 
-        const pdf = new jsPDF(); 
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
         const imgProps = pdf.getImageProperties(imgData);
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight); 
-        pdf.save(`${userName} resume.pdf`); 
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save(`${userName} resume.pdf`);
     });
+    saveData()
 });
-
-
