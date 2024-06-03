@@ -105,6 +105,8 @@
 .template .galleryTemplates .templateCol section img {
     border-radius: 0.4rem;
     width: 90%;
+    height: 25rem;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
 }
