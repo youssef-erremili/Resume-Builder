@@ -65,7 +65,7 @@ if (isset($_GET["id"])) {
                     <li><a href="../template/template.php">templates</a></li>
                     <li><a href="../job/job.php">jobs</a></li>
                     <li><a href="blog.php">blog</a></li>
-                    <li id="selected"><a class="selected" href="topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
+                    <li id="selected"><a class="selected" href="topic.php?id=2&title=about-us&image=../assets/image/about-us.webp">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
@@ -143,7 +143,7 @@ if (isset($_GET["id"])) {
                 <ul>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Privacy policy</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Terms and conditions</a></li>
-                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.webp"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
                 </ul>
             </div>
             <div class="footCol address">

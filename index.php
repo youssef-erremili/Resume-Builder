@@ -37,7 +37,7 @@ include("config/config.php");
                     <li><a href="template/template.php">templates</a></li>
                     <li><a href="job/job.php">jobs</a></li>
                     <li><a href="blog/blog.php">blog</a></li>
-                    <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
+                    <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.webp">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
@@ -95,7 +95,7 @@ include("config/config.php");
                         <h2>Easy to use Resume builder</h2>
                         <p>Craft your career effortlessly with our Resume builder Easy to use, professional
                             results. change Resume templates and customize fonts. No download required!"</p>
-                        <a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">How it works</a>
+                        <a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.webp">How it works</a>
                     </div>
                 </div>
                 <div class="col col2">
@@ -197,7 +197,7 @@ include("config/config.php");
                 <ul>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Privacy policy</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Terms and conditions</a></li>
-                    <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
+                    <li><a href="blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.webp"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
                 </ul>
             </div>
             <div class="footCol address">

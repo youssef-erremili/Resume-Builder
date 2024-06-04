@@ -37,7 +37,7 @@ include("../config/config.php");
                     <li><a href="../template/template.php">templates</a></li>
                     <li><a href="../job/job.php">jobs</a></li>
                     <li id="selected"><a class="selected" href="../blog/blog.php">blog</a></li>
-                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">about</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.webp">about</a></li>
                 </ul>
             </nav>
             <div class="getBtn">
@@ -57,14 +57,14 @@ include("../config/config.php");
         <div class="topics">
             <div class="topic topic0">
                 <div class="topicImg">
-                    <img src="../assets/image/about-us.jpg" alt="image topic">
+                    <img src="../assets/image/about-us.webp" alt="image topic">
                 </div>
                 <div class="topicContent">
                     <div class="topicTitle">
                         <section class="admin">
                             <h4>editor's choice</h4>
                         </section>
-                        <h2 class="title">About us and who we are</h2>
+                        <h2 class="title">About us and how to use</h2>
                         <div class="topicDescr">
                             <p>In the competitive job market, your resume is your first introduction to potential
                                 employers. Crafting a compelling and well-structured resume is crucial for making a
@@ -74,7 +74,7 @@ include("../config/config.php");
                         </div>
                         <div class="topicFooter">
                             <div class="readBlog">
-                                <a href="topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg">Know more</a>
+                                <a href="topic.php?id=2&title=about-us&image=../assets/image/about-us.webp">Know more</a>
                             </div>
                             <div class="topicDate">
                                 <section class="publishBy"><strong>Errehub</strong></section>
@@ -151,7 +151,7 @@ include("../config/config.php");
                 <ul>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Privacy policy</a></li>
                     <li><a href=""><ion-icon name="chevron-forward-outline"></ion-icon> Terms and conditions</a></li>
-                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.jpg"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
+                    <li><a href="../blog/topic.php?id=2&title=about-us&image=../assets/image/about-us.webp"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
                 </ul>
             </div>
             <div class="footCol address">

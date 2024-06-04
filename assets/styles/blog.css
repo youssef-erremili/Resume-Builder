@@ -24,7 +24,7 @@
 }
 
 .topicContent .topicTitle .admin h4 {
-    font-size: 1.2rem;
+    font-size: 0.99rem;
     font-weight: 400;
     color: var(--slogan-color);
     text-transform: capitalize;
@@ -36,6 +36,7 @@
     text-wrap: balance;
     line-height: 2.6rem;
     color: var(--main-title-c);
+    text-transform: capitalize;
 }
 
 .topicContent .topicTitle .topicDescr p {
