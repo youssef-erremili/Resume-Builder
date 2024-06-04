@@ -57,3 +57,15 @@ function scrollToSection(sectionId) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+//  this function is about when scrol down show navbar
+document.addEventListener('DOMContentLoaded', function() {
+    let navbar = document.querySelector(".nav");
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 180) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});

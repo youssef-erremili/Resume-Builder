@@ -11,6 +11,7 @@ $stmt->execute();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@ $stmt->execute();
     <link rel="stylesheet" href="../assets/styles/template.css">
     <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="nav">
@@ -31,7 +33,12 @@ $stmt->execute();
                         <ion-icon id="rotate" name="chevron-down-outline"></ion-icon>
                         <div id="drop">
                             <ul>
-                                <li><a href="../editor/editor.php">build resume</a></li>
+                                <li>
+                                    <a href="../editor/editor.php">
+                                        <ion-icon name="build"></ion-icon>
+                                        build resume
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -144,4 +151,5 @@ $stmt->execute();
     <script src="../assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>

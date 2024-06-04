@@ -29,7 +29,10 @@ include("config/config.php");
                         <div id="drop">
                             <ul>
                                 <li>
-                                    <a href="editor/editor.php">build resume</a>
+                                    <a href="editor/editor.php">
+                                        <ion-icon name="build"></ion-icon>
+                                        build resume
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -231,4 +234,5 @@ include("config/config.php");
     <script src="assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>

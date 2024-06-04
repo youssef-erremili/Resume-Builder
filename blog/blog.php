@@ -29,7 +29,10 @@ include("../config/config.php");
                         <div id="drop">
                             <ul>
                                 <li>
-                                    <a href="../editor/editor.php">build resume</a>
+                                    <a href="../editor/editor.php">
+                                        <ion-icon name="build"></ion-icon>
+                                        build resume
+                                    </a>
                                 </li>
                             </ul>
                         </div>
