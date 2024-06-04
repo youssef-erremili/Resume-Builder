@@ -104,16 +104,14 @@
 
 .template .galleryTemplates .templateCol section img {
     border-radius: 0.4rem;
-    width: 90%;
+    width: 93%;
+    object-fit: contain;
     height: 25rem;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
 }
 
 .template .galleryTemplates .templateCol section a {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
@@ -124,9 +122,10 @@
     background-color: var(--first-main-color);
     color: var(--box-color);
     border-radius: 0.3rem;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
     opacity: 0;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .template .galleryTemplates .templateCol:hover a {
@@ -143,12 +142,12 @@
     font-size: 1.050rem;
     font-weight: 600;
     text-transform: capitalize;
-    color: #1e2532;
+    color: var(--main-title-c);
     line-height: 2rem;
 }
 
 .template .galleryTemplates .templateCol section:nth-child(3) p {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: #b9babd;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--slogan-color);
 }
