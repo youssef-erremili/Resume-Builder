@@ -326,5 +326,4 @@ downloadPdf.addEventListener('click', function (e) {
         pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
         pdf.save(`${userName} resume.pdf`);
     });
-    saveData()
 });
